@@ -15,7 +15,7 @@ function App() {
       <div className="d-flex justify-content-center tag-name">
         from negative emotions
       </div>
-      <div class="sign-in">Get Started</div>
+      <div class="sign-in">Get Started into the app</div>
       {/* <Link to="/signup" className="sign-in">Sign up</Link> */}
       {/* <BrowserRouter>
         <Signup></Signup>
