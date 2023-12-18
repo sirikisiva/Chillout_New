@@ -1,28 +1,27 @@
-import logo from "./logo.svg";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Button } from "react-bootstrap";
-import Signup from './Signup'
-import { BrowserRouter as Router, Route, Link, BrowserRouter } from 'react-router-dom';
+import React from 'react';
+import { BrowserRouter , Route, Routes, useHistory } from 'react-router-dom';
+import LogoScreen from "./logoscreen";
+import SignupScreen from "./Signup";
+import LoginScreen from "./loginscreen";
+import ForgotPasswordScreen from "./forgotpassword";
+import UserInfo from "./userinfo";
 
-function App() {
+const App = () => {
   return (
-    <div className="container-fluid bg">
-      <div className="d-flex justify-content-center pdng">
-        <img src="new-logo.png"></img>
-      </div>
-      <div className="d-flex justify-content-center title-name">CHILL OUT</div>
-      <div className="d-flex justify-content-center tag-name">
-        from negative emotions
-      </div>
-      <div class="sign-in">Get Started into the app</div>
-      {/* <Link to="/signup" className="sign-in">Sign up</Link> */}
-      {/* <BrowserRouter>
-        <Signup></Signup>
-      </BrowserRouter> */}
-    
+    <div>
+      <BrowserRouter>
+      <Routes>
+       <Route path="/" element = { <LogoScreen></LogoScreen> }></Route>
+       <Route path="/SignupScreen" element = { <SignupScreen></SignupScreen> }></Route>
+       <Route path="/LoginScreen" element = { <LoginScreen></LoginScreen>}></Route>
+       <Route path="/ForgotPasswordScreen" element = { <ForgotPasswordScreen></ForgotPasswordScreen>}></Route>
+       <Route path="/UserInfo" element = { <UserInfo></UserInfo> }></Route>
+      </Routes>
+      </BrowserRouter>
     </div>
   );
-}
+};
 
 export default App;
