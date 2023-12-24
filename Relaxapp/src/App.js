@@ -7,6 +7,7 @@ import SignupScreen from "./Signup";
 import LoginScreen from "./loginscreen";
 import ForgotPasswordScreen from "./forgotpassword";
 import UserInfo from "./userinfo";
+import Features from "./features";
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
        <Route path="/LoginScreen" element = { <LoginScreen></LoginScreen>}></Route>
        <Route path="/ForgotPasswordScreen" element = { <ForgotPasswordScreen></ForgotPasswordScreen>}></Route>
        <Route path="/UserInfo" element = { <UserInfo></UserInfo> }></Route>
+       <Route path="/Features" element = {<Features></Features> }></Route>
       </Routes>
       </BrowserRouter>
     </div>
