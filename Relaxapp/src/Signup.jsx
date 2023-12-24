@@ -29,6 +29,12 @@ const SignupScreen = () => {
     setPopupOpen(false);
   };
 
+  const goToFeaturesScreen = () =>{
+    navigate('/Features')
+  }
+
+
+
   return (
     <div>
       <div className="d-flex">
@@ -69,7 +75,7 @@ const SignupScreen = () => {
                   overall app journey.
                 </a>
 
-                <div className="submit">Sign Up</div>
+                <div className="submit" onClick={goToFeaturesScreen}>Sign Up</div>
               </form>
             </div>
             <div className="blueBackground"></div>
