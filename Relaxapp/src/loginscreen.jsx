@@ -19,6 +19,10 @@ const LoginScreen = () => {
     navigate('/ForgotPasswordScreen')
   }
 
+  const goToFeaturesScreen = () =>{
+    navigate('/Features')
+  }
+
   return (
   
     <div className="d-flex">
@@ -42,7 +46,7 @@ const LoginScreen = () => {
               ></input>
             </div>
 
-            <div className="submit">Log In</div>
+            <div className="submit" onClick={goToFeaturesScreen}>Log In</div>
           </form>
           <div className="forgotPassword" onClick={goToForgotPasswordScreen}>Forgot password!</div>
           <div className="signUpAccount" onClick={goToSignupScreen}>
@@ -54,7 +58,7 @@ const LoginScreen = () => {
     </div>
     <div className="col-5">
      
-        <img src="./loginVideo.gif" className="cartoon-image"></img>
+        {/* <img src="./loginVideo.gif" className="cartoon-image"></img> */}
       
     </div>
   </div>
