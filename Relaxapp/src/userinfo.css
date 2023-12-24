@@ -3,5 +3,37 @@
     border-radius: 20px;
     position: relative;
     margin: 20px;
-    margin-top: -60px;
+    margin-top: 0px;
+    height: 90vh;
+    overflow-y: scroll;
+}
+.userinfo::-webkit-scrollbar {
+    width: 10px; 
+}
+.qnsForm{
+    padding: 2rem;
+    margin-left: 3rem;
+}
+.mrgn{
+    margin-left: 2rem;
+}
+.qnsinputField{
+    width: 95%;
+    height: 40px;
+    border-radius: 15px;
+    background-color: bisque;
+    border: 1px solid beige;
+    padding: 1rem;
+}
+.choices{
+    padding-left: 5px;
+    color: blueviolet;
+    font-size: 16px;
+}
+.qnsMargin{
+    margin-top: 1rem;
+}
+.labelText{
+color: blue;
+font-size: 18px;
 }
