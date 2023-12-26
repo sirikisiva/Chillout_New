@@ -119,3 +119,7 @@ body{
     width: 400px;
     animation: cartoonAnimation 3s ease-out forwards;
   }
+.error-message{
+    color: red;
+    padding-left: 10px;
+}
