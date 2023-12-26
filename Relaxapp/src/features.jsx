@@ -49,8 +49,8 @@ const Features = () => {
       <div className='heading'>CHILL OUT</div>
       <div className='subHeading'> Pick your favorite genres and let your soul relax! </div>
       <div className='bees' title="Click to scroll for more features">
-        <div onClick={() => (scrollBy(-200))}><img className='leftBee' src="./beeCartoon.png" alt="Left Bee" /></div>
-        <div onClick={() => (scrollBy(200))}><img className='rightBee' src="./beeCartoon.png" alt="Right Bee" /></div>
+        <div onClick={() => (scrollBy(-200))}><img className='leftBee' src="./move.png" alt="Left Bee" /></div>
+        <div onClick={() => (scrollBy(200))}><img className='rightBee' src="./move.png" alt="Right Bee" /></div>
       </div>
       <div ref={containerRef} className="featuresBox">
         <FeaturesCard cards={cards}></FeaturesCard>
