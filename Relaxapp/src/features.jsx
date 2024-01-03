@@ -1,11 +1,12 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import './features.css';
 import { useNavigate } from "react-router-dom";
 import FeaturesCard from './featurescard';
 
+
 const Features = () => {
   const navigate = useNavigate();
-
+ 
   const cards = [
     {
       id: 'music',
@@ -48,22 +49,21 @@ const Features = () => {
   const goToIndividualScreens = (cardId) =>{
      switch(cardId)
       {
-         case 'music' :  navigate('/Music');
+         case 'music' :  navigate('/Music', { state: { selectedCard: cardId } } );
          break;
-         case 'meditation' :  navigate('/Meditation');
+         case 'meditation' :  navigate('/Meditation',  { state: { selectedCard: cardId } });
          break;
-         case 'motivation' :  navigate('/Motivation');
+         case 'motivation' :  navigate('/Motivation',  { state: { selectedCard: cardId } });
          break;
-         case 'friend' :  navigate('/Friend');
+         case 'friend' :  navigate('/Friend',  { state: { selectedCard: cardId } });
          break;
-         case 'books' :  navigate('/Books');
+         case 'books' :  navigate('/Books',  { state: { selectedCard: cardId } });
          break;
-         case 'reels' :  navigate('/Reels');
+         case 'reels' :  navigate('/Reels',  { state: { selectedCard: cardId } });
          break;
          default : break;
       }  
     }
-
 
   const containerRef = useRef(null);
 
@@ -74,9 +74,9 @@ const Features = () => {
   };
 
   return (
-    <div className='featuresScreen'>
-      <h1 className='heading'>CHILL OUT</h1>
-      <h6 className='subHeading'> Pick your favorite genres and let your soul relax! </h6>
+    <div>
+      <div className='heading'>CHILL OUT</div>
+      <div className='subHeading'> Pick your favorite genres and let your soul relax! </div>
       <div className='bees' title="Click to scroll for more features">
         <div onClick={() => (scrollBy(-200))}><img className='leftBee' src="./move.png" alt="Left Bee" /></div>
         <div onClick={() => (scrollBy(200))}><img className='rightBee' src="./move.png" alt="Right Bee" /></div>
