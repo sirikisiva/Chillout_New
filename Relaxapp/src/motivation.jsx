@@ -1,6 +1,7 @@
 import React from 'react';
 import SideMenu from './sidemenu';
 import './features.css';
+import DisplayMotivation from './displaymotivation';
 
 
 const Motivation = () => {
@@ -9,8 +10,10 @@ const Motivation = () => {
       <div className='col-3 side-menu'>
         <SideMenu></SideMenu>
       </div>
-      <div className='col-9'></div>
-      
+      <div className='col-9'>
+      <DisplayMotivation></DisplayMotivation>
+      </div>
+     
     </div>
   )
 
