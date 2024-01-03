@@ -63,22 +63,13 @@ const LoginScreen = () => {
   };
 
   return (
-    <div className="loginScreen">
-      <p className="homeBtn">Home</p>
-      <div className="loginContainer">
+    <div className="loginScreen d-flex">
+      <div className="loginContainer col-5">
         <div className="card">
           <div className="box1">
             <div>
               <h3 className="login">Login Account</h3>
               <p className="caption">Welcome to our App</p>
-            </div>
-            <div>
-            <h6>
-                Don't have an account?
-              </h6>
-              <h6 className="regBtn" onClick={goToSignupScreen}>
-                Register
-              </h6>
             </div>
           </div>
 
@@ -140,14 +131,27 @@ const LoginScreen = () => {
               <button className="signInBtn">Login with Company Email</button>
             </div>
           </form>
+
+
+         <div>
+            <h6 className="regHere" onClick={goToSignupScreen}>
+                Don't have an account? <span className="regBtn" > Register</span>
+              </h6>
+           
+            </div>
+
+
         </div>
       </div>
-      <div className="titleAnim">
+      <div className="titleAnim col-7">
         <p className="logoName">ChillOUT</p>
         <p className="logoCaption">chill vibe with chilling content</p>
         <img src="./logocircle.png" alt ="logo" className="App-logo"/>
-        <h6>Nice to see you again</h6>
-        <h1>WELCOME BACK!</h1>
+         <div>
+         <h1>WELCOME BACK!</h1>
+         <h6>Nice to see you again</h6>
+       
+          </div>
         </div>
     </div>
   );
