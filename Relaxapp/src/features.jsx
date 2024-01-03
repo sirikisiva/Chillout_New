@@ -74,9 +74,9 @@ const Features = () => {
   };
 
   return (
-    <div>
-      <div className='heading'>CHILL OUT</div>
-      <div className='subHeading'> Pick your favorite genres and let your soul relax! </div>
+    <div className='featuresScreen'>
+      <h1 className='heading'>CHILL OUT</h1>
+      <h6 className='subHeading'> Pick your favorite genres and let your soul relax! </h6>
       <div className='bees' title="Click to scroll for more features">
         <div onClick={() => (scrollBy(-200))}><img className='leftBee' src="./move.png" alt="Left Bee" /></div>
         <div onClick={() => (scrollBy(200))}><img className='rightBee' src="./move.png" alt="Right Bee" /></div>
