@@ -58,9 +58,10 @@
   align-items: center;
   position: relative;
   color: rgb(0, 0, 0);
-  /* margin-left: 100px; */
 }
 .logoWithName{
+  display: flex;
+  justify-content: center;
   width: 30%;
 }
 .startContent {
@@ -78,53 +79,3 @@
   padding: 20px;
   width: 35%;
 }
-/* .sideHeading{
-    padding: 10px;
-    width: 40%;
-    position: fixed;
-    top: 10%;
-    left: 60%;
-    background-color: black;
-    border-radius: 40px 0px 0px 40px;
-}
-.full-width{
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    height: 100%;
-
-
-
-
-
-
-  .bg{
-  margin: 0;
-  padding: 0;
-  height: 100vh;
- background: linear-gradient(0deg,  #CBB5E2, #FFC0CB);
-  }
-  .pdng{
- padding-top: 4rem;
-  display: flex;
-  align-items: center;
-  }
-  .title-name{
-  position: relative;
-    bottom: 16.3rem;
-    font-size: 28px;
-    padding-left: 4.5rem;
-    color: blueviolet;
-  }
-  .tag-name{
-  position: relative;
-    bottom: 14.6rem;
-    padding-left: 2rem;
-    font-size: 14px;
-    color: darkslateblue;
-  }
-  .sideHeading{
-    font-size: 70px;
-    color: blue;
-  }
-} */
