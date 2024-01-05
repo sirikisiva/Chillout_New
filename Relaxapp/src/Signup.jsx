@@ -48,7 +48,8 @@ const SignupScreen = () => {
     return isValid;
   };
 
-  const goToFeaturesScreen = () => {
+  const goToFeaturesScreen = (e) => {
+    e.preventDefault();
     if (validateForm()) {
       navigate("/Features");
     }
@@ -56,6 +57,7 @@ const SignupScreen = () => {
 
   const handleInputChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+    validateForm();
   };
 
   const goToLoginScreen = () => {
@@ -71,8 +73,9 @@ const SignupScreen = () => {
   };
 
   return (
-    <div className="signUpScreen">
-      <div className="firstView">
+   <div>
+     <div className="signUpScreen">
+      {/* <div className="firstView">
         <img src="./logoWithName.png" alt="logoWithName.png" className="signupLogo"/>
         <div>
           <b>Registration and Profile Creation:</b>
@@ -111,26 +114,21 @@ const SignupScreen = () => {
             fostering a welcoming environment for meaningful conversations.
           </p>
         </div>
-      </div>
-      <div className="secondView">
-        <div className="signUpCard">
-          <div className="viewOne">
+      </div> */}
+       <div className="loginContainer col-6">
+        <div className="card">
+          <div className="box1">
             <div>
-              <h3>SignUp</h3>
-              <p>Few clicks away from registration</p>
-              <p>Create Account!</p>
-            </div>
-            <div>
-              <p>Already have an account?</p>
-              <p onClick={goToLoginScreen} className="loginBtn">
-                Login
-              </p>
+              <h3 className="login">Join us today!</h3>
+              <p className="caption">Sign up now to become a member.</p>
             </div>
           </div>
-          <div className="viewTwo">
-            <form>
+
+          <form>
+            <div className="signupbox2">
               <div className="inputContainer">
-                <label className="inputLabel">NAME </label>
+                <div>
+                <label className="inputLabel">Name </label>
                 <input
                   type="text"
                   name="name"
@@ -138,12 +136,15 @@ const SignupScreen = () => {
                   value={formData.name}
                   onChange={handleInputChange}
                 ></input>
+                </div>
                 {errors.name && (
                   <div className="error-message">{errors.name}</div>
                 )}
               </div>
+
               <div className="inputContainer">
-                <label className="inputLabel">EMAIL </label>
+                <div>
+                <label className="inputLabel">Email </label>
                 <input
                   type="email"
                   name="email"
@@ -151,12 +152,14 @@ const SignupScreen = () => {
                   value={formData.email}
                   onChange={handleInputChange}
                 ></input>
+                </div>
                 {errors.email && (
                   <div className="error-message">{errors.email}</div>
                 )}
               </div>
               <div className="inputContainer">
-                <label className="inputLabel">PASSWORD </label>
+                <div>
+                <label className="inputLabel">Password </label>
                 <input
                   type="password"
                   name="password"
@@ -164,174 +167,44 @@ const SignupScreen = () => {
                   onChange={handleInputChange}
                   className="inputStyle"
                 ></input>
+                </div>
                 {errors.password && (
                   <div className="error-message">{errors.password}</div>
                 )}
               </div>
 
-              <button className="signUpBtn" onClick={goToFeaturesScreen}>
-                SignUp
+            </div>
+            <div className="box3">
+              <div className="lineContainer">
+              <a className="clickHere" onClick={openPopup} >
+                  Click here! to share a bit about yourself and enhance your
+                  overall app journey.
+                </a>
+               
+              </div>
+
+              <button className="signInBtn"  onClick={(e) => goToFeaturesScreen(e)}>
+              Sign Up
               </button>
-            </form>
+            
+            </div>
+          </form>
+
+          <div>
+            <h6 className="signupRegHere" onClick={goToLoginScreen}>
+            Already Registered? Log in here. <span className="regBtn"> Login</span>
+            </h6>
           </div>
-          <div className="viewThree"></div>
-          <a className="clickHere" onClick={openPopup} href="clickHere">
-            Share feedback
-          </a>
         </div>
       </div>
-      <div>{isPopupOpen && <UserInfo onClose={closePopup} />}</div>
+      <div className="titleAnim col-6">
+        <img src="./chillogo.png" alt="logo" />
+      </div>
+     
     </div>
+    <div>{isPopupOpen && <UserInfo onClose={closePopup} />}</div>
+   </div>
   );
 };
 
 export default SignupScreen;
-
-// import React, { useState } from "react";
-// import { useNavigate } from "react-router-dom";
-// import UserInfo from "./userinfo";
-// import "./signup.css";
-
-// const SignupScreen = () => {
-//   const [isPopupOpen, setPopupOpen] = useState(false);
-//   const navigate = useNavigate();
-
-//   const [formData, setFormData] = useState({
-//     name: "",
-//     email: "",
-//     password: "",
-//   });
-
-//   const [errors, setErrors] = useState({
-//     name: "",
-//     email: "",
-//     password: "",
-//   });
-
-//   const validateForm = () => {
-//     let isValid = true;
-//     const newErrors = { ...errors };
-
-//     if (!formData.name) {
-//       newErrors.name = "Please enter your name";
-//       isValid = false;
-//     } else {
-//       newErrors.name = "";
-//     }
-
-//     if (!formData.email) {
-//       newErrors.email = "Please enter your email";
-//       isValid = false;
-//     } else {
-//       newErrors.email = "";
-//     }
-
-//     if (!formData.password) {
-//       newErrors.password = "Please enter your password";
-//       isValid = false;
-//     } else {
-//       newErrors.password = "";
-//     }
-
-//     setErrors(newErrors);
-//     return isValid;
-//   };
-
-//   const goToFeaturesScreen = () => {
-//     if (validateForm()) {
-//       navigate("/Features");
-//     }
-//   };
-
-//   const handleInputChange = (e) => {
-//     setFormData({ ...formData, [e.target.name]: e.target.value });
-//   };
-
-//   const goToLoginScreen = () => {
-//     navigate("/LoginScreen");
-//   };
-
-//   const openPopup = () => {
-//     setPopupOpen(true);
-//   };
-
-//   const closePopup = () => {
-//     setPopupOpen(false);
-//   };
-
-//   return (
-//     <div>
-//       <div className="d-flex">
-//         <div className="col-7">
-//           <div>
-//             <div className="newAccount signUp">Create new Account</div>
-//             <div className="registered signUp" onClick={goToLoginScreen}>
-//               Already Registered? Log in here.
-//             </div>
-//           </div>
-//           <div className="signupBox">
-//             <div className="orangeBackground"></div>
-//             <div className="signupFormBox">
-//               <form>
-//                 <div className="fields">
-//                   <label className="labelName">NAME </label>
-//                   <input
-//                     type="text"
-//                     name="name"
-//                     value={formData.name}
-//                     onChange={handleInputChange}
-//                     className="inputField"
-//                   ></input>
-//                   {errors.name && (
-//                     <div className="error-message">{errors.name}</div>
-//                   )}
-//                 </div>
-//                 <div className="field">
-//                   <label className="labelName">EMAIL </label>
-//                   <input
-//                     type="email"
-//                     name="email"
-//                     className="inputField"
-//                     value={formData.email}
-//                     onChange={handleInputChange}
-//                   ></input>
-//                   {errors.email && (
-//                     <div className="error-message">{errors.email}</div>
-//                   )}
-//                 </div>
-//                 <div className="field">
-//                   <label className="labelName">PASSWORD </label>
-//                   <input
-//                     type="password"
-//                     name="password"
-//                     value={formData.password}
-//                     onChange={handleInputChange}
-//                     className="inputField"
-//                   ></input>
-//                   {errors.password && (
-//                     <div className="error-message">{errors.password}</div>
-//                   )}
-//                 </div>
-
-//                 <a className="clickHere" onClick={openPopup}>
-//                   Click here! to share a bit about yourself and enhance your
-//                   overall app journey.
-//                 </a>
-
-//                 <div className="submit" onClick={goToFeaturesScreen}>
-//                   Sign Up
-//                 </div>
-//               </form>
-//             </div>
-//             <div className="blueBackground"></div>
-//           </div>
-//         </div>
-//         <div className="col-5 animated-col"></div>
-//       </div>
-
-//       <div>{isPopupOpen && <UserInfo onClose={closePopup} />}</div>
-//     </div>
-//   );
-// };
-
-// export default SignupScreen;
