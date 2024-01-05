@@ -82,8 +82,20 @@
   box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px,
     rgba(0, 0, 0, 0.05) 0px 5px 10px;
 }
-
-
+.signupbox2{
+  height: 28vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.signupRegHere{
+  cursor: pointer;
+  padding-top: 10px;
+  margin-bottom: -1rem;
+}
+.clickHere{
+  cursor: pointer;
+}
 
 
 
