@@ -1,39 +1,24 @@
 .userinfo{
     background-color: #fff;
     border-radius: 20px;
-    position: relative;
-    margin: 20px;
-    margin-top: 0px;
-    height: 90vh;
-    overflow-y: scroll;
+    margin: 6rem;
+    height: 80vh;
+    width: 80vw;
 }
-.userinfo::-webkit-scrollbar {
-    width: 10px; 
-}
-.qnsForm{
-    padding: 2rem;
-    margin-left: 3rem;
-}
-.mrgn{
-    margin-left: 2rem;
-}
-.qnsinputField{
-    width: 95%;
-    height: 40px;
-    border-radius: 15px;
-    background-color: bisque;
-    border: 1px solid beige;
+.closeButton{
+    display: flex;
+    justify-content: flex-end;
     padding: 1rem;
 }
-.choices{
-    padding-left: 5px;
-    color: blueviolet;
-    font-size: 16px;
-}
-.qnsMargin{
-    margin-top: 1rem;
-}
-.labelText{
-color: blue;
-font-size: 18px;
-}
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
