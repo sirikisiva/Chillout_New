@@ -20,13 +20,7 @@
 .loginScreen {
   display: flex;
   flex-direction: row;
-  background: rgb(206, 179, 255);
-  background: linear-gradient(
-    90deg,
-    rgba(206, 179, 255, 1) 0%,
-    rgba(251, 244, 255, 1) 92%,
-    rgba(248, 244, 255, 1) 100%
-  );
+
 }
 .loginContainer {
   height: 100vh;

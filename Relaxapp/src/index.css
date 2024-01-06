@@ -3,13 +3,15 @@ body {
   font-family:  "Poppins", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: rgb(206, 179, 255);
+  /* background: rgb(206, 179, 255);
   background: linear-gradient(
     90deg,
     rgba(206, 179, 255, 1) 0%,
     rgba(251, 244, 255, 1) 92%,
     rgba(248, 244, 255, 1) 100%
-  );
+  ); */
+  background: rgb(206,179,255);
+background: linear-gradient(90deg, rgba(206,179,255,1) 0%, rgba(255,254,255,1) 66%, rgba(220,240,255,1) 100%);
 }
 
 code {

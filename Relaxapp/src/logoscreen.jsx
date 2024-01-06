@@ -13,7 +13,7 @@ const LogoScreen = () => {
     <div className="logoScreen">
       <div className="startLogo">
         <div className="logoWithName">
-          <img src="./logoWithName.png" alt="logo"  />
+          <img src="./chillogo.png" alt="logo"  />
         </div>
         <div className="startContent">
           <h1>Look through Chillout</h1>
