@@ -94,7 +94,24 @@ const NewPassword = () => {
   };
 
   const onClickResetPassword = () => {
-    navigate("/LoginScreen");
+    if (
+      newPassword.valid &&
+      confirmPassword.valid &&
+      newPassword.password === confirmPassword.password
+    ) {
+      navigate("/LoginScreen");
+    } else {
+      setNewPassword({
+        ...newPassword,
+        errorActive: true,
+        errorMessage: "Please enter valid passwords to reset",
+      });
+      setConfirmPassword({
+        ...confirmPassword,
+        errorActive: true,
+        errorMessage: "Please enter valid passwords to reset",
+      });
+    }
   };
 
   // const handleAnimationEnd = () => {
@@ -157,15 +174,9 @@ const NewPassword = () => {
             className="npSignInBtn"
             style={{
               color:
-                (newPassword.valid === confirmPassword.valid) === true
-                  ? "white"
-                  : "gray",
+                newPassword.valid && confirmPassword.valid ? "white" : "gray",
             }}
-            disabled={
-              (newPassword.valid === confirmPassword.valid) === true
-                ? false
-                : true
-            }
+            disabled={newPassword.valid && confirmPassword.valid ? false : true}
             onClick={onClickResetPassword}
           >
             RESET
