@@ -1,163 +1,142 @@
 import React, { useState } from "react";
 import "./forgotpassword.css";
 import { data } from "./data";
+import { useNavigate } from "react-router-dom";
 
 const ForgotPasswordScreen = () => {
-  // const [password, setPassword] = useState("");
-  // const [confirmPassword, setConfirmPassword] = useState("");
-  // const [passwordError, setPasswordError] = useState("");
-  // const [confirmPasswordError, setConfirmPasswordError] = useState("");
-
-  const [email, setEmail] = useState("");
-  const [otp, setOtp] = useState("");
   const regex = data;
-  const [emailError, setEmailError] = useState({
+  const navigate = useNavigate();
+  const [email, setEmail] = useState({
+    val: "",
     errorActive: false,
-    errorMessage: "", 
-  });
-  const [otpError, setOtpError] = useState({
-    errorActive: false,
-    errorMessage: "",  
-  });
-  const [otpValue, setOtpValue] = useState({
-    get: false,
+    errorMessage: "",
     verify: false,
+    valid: false,
+  });
+  const [otp, setOtp] = useState({
+    val: "",
+    errorActive: false,
+    errorMessage: "",
+    verify: false,
+    valid: false,
   });
 
   const handleOnEmailInputChange = (e) => {
-    setEmail(e.target.value);
-    console.log(email);
+    const val = regex[0].email.test(e.target.value);
+    setEmail({ ...email, val: e.target.value, valid: val });
   };
+
   const handleOnOtpInputChange = (e) => {
-    setOtp(e.target.value);
-    console.log(otp);
+    const input = e.target.value.replace(/[^0-9]/g, "").slice(0, 4);
+    const val = regex[3].otp.test(e.target.value);
+    setOtp({ ...otp, val: input, verify: true, valid: val });
+    console.log(otp.val, "-----", otp.valid);
+    // In general, we should provide OTP sent to email,
+    // for the time being, we are using .length
   };
+
   const handleEmailInputOnBlur = () => {
-    if (email === "" || email === undefined || email === null) {
-      setEmailError({
-        ...emailError,
+    if (email.val === "" || email.val === undefined || email.val === null) {
+      setEmail({
+        ...email,
         errorActive: true,
         errorMessage: "Enter registered email ID",
       });
-    } else if (email.match(regex[0].email)) {
-     
-      setEmailError({
-        ...emailError,
+    } else if (email.val.match(regex[0].email)) {
+      setEmail({
+        ...email,
         errorActive: false,
-        errorMessage: "correctEmail",
+        errorMessage: "validEmail",
       });
-      console.log(`It's a Match ${emailError.errorMessage} ${emailError.errorActive}`);
+      console.log(`It's a Match ${email.errorMessage} `);
     } else {
-     
-      setEmailError({
-        ...emailError,
+      setEmail({
+        ...email,
         errorActive: true,
         errorMessage: "Please enter valid email ID",
       });
-      console.log(`It's not a Matched ${emailError.errorMessage}  ${emailError.errorActive}`);
+      console.log(
+        `It's not a Matched ${email.errorMessage}  ${email.errorActive}`
+      );
     }
   };
   const handleOtpInputOnBlur = () => {
-    if (otp === "" || otp === undefined || otp === null) {
-      setOtpError({
-        ...otpError,
+    if (otp.val === "" || otp.val === undefined || otp.val === null) {
+      setOtp({
+        ...otp,
         errorActive: true,
         errorMessage: "Enter OTP sent to your email",
       });
-      console.log(`Enter valid OTP ==>  ${otpError.errorMessage} ${regex[3].otp}`);
-      
-    } 
-    else if (otp.match(regex[3].otp)) {
-      
-      setOtpError({
-        ...otpError,
+      console.log(`Enter valid OTP ==>  ${otp.errorMessage}`);
+    } else if (otp.val.match(regex[3].otp)) {
+      setOtp({
+        ...otp,
         errorActive: false,
         errorMessage: "correctOTP",
+        verify: true,
       });
-      console.log(`It's a Match ==> ${otpError.errorMessage} ${regex[3].otp}`);
+      console.log(`It's a Match ==> ${otp.errorMessage} ${otp.errorActive}`);
     } else {
-     
-      setOtpError({
-        ...otpError,
+      setOtp({
+        ...otp,
         errorActive: true,
-        errorMessage: "OTP should be 5 digits",
+        errorMessage: "OTP should be 4 digits",
       });
-      console.log(`It's not a Matched ==>  ${otpError.errorMessage} ${otpError.errorActive}`);
+      console.log(
+        `It's not a Matched ==>  ${otp.errorMessage} ${otp.errorActive}`
+      );
+    }
+  };
+  // post email to get OTP
+  const onClickGetOtp = () => {
+    setEmail({ ...email, verify: true });
+    console.log(email.verify);
+  };
+
+  // passing params through navigation
+  const onClickVerifyOtp = () => {
+    if (otp.verify === true) {
+      navigate("/newPassword", {
+        state: { value: otp.verify, webToken: "" },
+      });
+      console.log("OTP verified ==>> navigating to new password screen ");
     }
   };
 
-
-
-  const onClickGetOtp = () => {
-    setOtpValue({ ...otpValue, get: true });
-  };
-const onClickVerifyOtp = () => {
-  console.log("OTP verified")
-}
-  // const validatePassword = () => {
-  //   if (!password) {
-  //     setPasswordError("Please enter a password");
-  //   } else if (password.length < 6) {
-  //     setPasswordError("Password must be at least 6 characters");
-  //   } else {
-  //     setPasswordError("");
-  //   }
-  // };
-
-  // const validateConfirmPassword = () => {
-  //   if (!confirmPassword) {
-  //     setConfirmPasswordError("Please confirm your password");
-  //   } else if (confirmPassword !=== password) {
-  //     setConfirmPasswordError("Passwords do not match");
-  //   } else {
-  //     setConfirmPasswordError("");
-  //   }
-  // };
-
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   validatePassword();
-  //   validateConfirmPassword();
-  // };
-
-  // const handleAnimationEnd = () => {
-  //   const chilloutText = document.querySelector(".chill-out-text");
-  //   chilloutText.style.display = "block";
-  // };
-
   return (
     <div className="forgotPasswordScreen">
-      {emailError.errorMessage === "correctEmail" && otpValue.get === true ? (
+      {email.errorMessage === "validEmail" && email.verify === true ? (
         <div className="fpCard">
           <div className="titleBox">
-            <h1>Forgot Password</h1>
+            <h1>{otp.valid === true ? "true" : "false"}</h1>
             <p>If registered you'll receive OTP</p>
           </div>
           <div className="inputsBox">
             <div className="emailInputContainer">
               <label className="inputLabel">OTP</label>
               <input
-                type="number"
+                type="text"
                 name="otp"
+                value={otp.val}
                 placeholder="enter OTP"
                 className="fpInputStyle"
-                value={otp}
                 onChange={handleOnOtpInputChange}
-                // onFocus={handleFocus}
                 onBlur={handleOtpInputOnBlur}
+                maxLength={4}
               />
-              {otpError.errorActive === false &&
-              otpError.errorMessage === "correctOTP" ? (
+              {otp.errorActive === false &&
+              otp.errorMessage === "correctOTP" ? (
                 <></>
               ) : (
-                <div className="error-message">{otpError.errorMessage}</div>
+                <div className="error-message">{otp.errorMessage}</div>
               )}
             </div>
           </div>
           <div className="loginBtnBox">
             <button
               className="fpSignInBtn"
-              hidden={otpError.errorMessage === "correctOTP" ? false : true}
+              style={{ color: otp.valid === true ? "white" : "gray" }}
+              disabled={otp.valid === true ? false : true}
               onClick={onClickVerifyOtp}
             >
               VERIFY
@@ -178,24 +157,26 @@ const onClickVerifyOtp = () => {
                 name="email"
                 placeholder="enter registered email"
                 className="fpInputStyle"
-                value={email}
+                value={email.val}
                 onChange={handleOnEmailInputChange}
-                // onFocus={handleFocus}
                 onBlur={handleEmailInputOnBlur}
               />
-              {emailError.errorActive === false &&
-              emailError.errorMessage === "correctEmail" ? (
+              {email.errorActive === false &&
+              email.errorMessage === "validEmail" ? (
                 <></>
               ) : (
-                <div className="error-message">{emailError.errorMessage}</div>
+                <div className="error-message">{email.errorMessage}</div>
               )}
             </div>
           </div>
           <div className="loginBtnBox">
             <button
               className="fpSignInBtn"
-              hidden={emailError.errorMessage === "correctEmail" ? false : true}
+              style={{
+                color: email.valid === true ? "white" : "gray",
+              }}
               onClick={onClickGetOtp}
+              disabled={email.valid === true ? false : true}
             >
               GET OTP
             </button>
@@ -207,5 +188,3 @@ const onClickVerifyOtp = () => {
 };
 
 export default ForgotPasswordScreen;
-
-

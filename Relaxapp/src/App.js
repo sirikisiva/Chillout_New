@@ -1,11 +1,12 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import React from 'react';
-import { BrowserRouter , Route, Routes, useHistory } from 'react-router-dom';
+import { BrowserRouter , Route, Routes } from 'react-router-dom';
 import LogoScreen from "./logoscreen";
 import SignupScreen from "./Signup";
 import LoginScreen from "./loginscreen";
 import ForgotPasswordScreen from "./forgotpassword";
+import NewPassword from "./newPassword";
 import UserInfo from "./userinfo";
 import Features from "./features";
 import Music from "./music";
@@ -25,6 +26,7 @@ const App = () => {
        <Route path="/SignupScreen" element = { <SignupScreen></SignupScreen> }></Route>
        <Route path="/LoginScreen" element = { <LoginScreen></LoginScreen>}></Route>
        <Route path="/ForgotPasswordScreen" element = { <ForgotPasswordScreen></ForgotPasswordScreen>}></Route>
+       <Route path="/newPassword" element={<NewPassword></NewPassword>}></Route>
        <Route path="/UserInfo" element = { <UserInfo></UserInfo> }></Route>
        <Route path="/Features" element = {<Features></Features> }></Route>
        <Route path="/Music" element = {<Music></Music> }></Route>
