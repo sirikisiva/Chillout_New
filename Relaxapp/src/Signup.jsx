@@ -172,14 +172,40 @@ const SignupScreen = () => {
                   <div className="error-message">{errors.password}</div>
                 )}
               </div>
+              <div className="inputContainer">
+                <div>
+                <label className="inputLabel">Confirm Password </label>
+                <input
+                  type="password"
+                  name="password"
+                  value={formData.password}
+                  onChange={handleInputChange}
+                  className="inputStyle"
+                ></input>
+                </div>
+                {errors.password && (
+                  <div className="error-message">{errors.password}</div>
+                )}
+              </div>
 
             </div>
             <div className="box3">
-              <div className="lineContainer">
-              <a className="clickHere" onClick={openPopup} >
-                  Click here! to share a bit about yourself and enhance your
-                  overall app journey.
+              <div className="lineContainerSignup">
+              <input className="checkboxSignup" type="checkbox" />
+               <label>
+               <a className="clickHere" onClick={openPopup} >
+                  Click here! to share a bit about yourself.
                 </a>
+               </label>
+               
+              </div>
+              <div className="lineContainerSignup">
+              <input className="checkboxSignup" type="checkbox" />
+               <label  className="clickHere">
+               <a>
+                I accept the terms & conditions of the app
+                </a>
+               </label>
                
               </div>
 
