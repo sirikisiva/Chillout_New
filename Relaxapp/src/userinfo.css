@@ -21,4 +21,7 @@
     align-items: center;
     justify-content: center;
   }
-  
+  .qns{
+    padding: 2rem;
+    font-size: 20px;
+  }
