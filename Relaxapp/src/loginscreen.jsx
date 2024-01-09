@@ -39,7 +39,7 @@ const LoginScreen = () => {
 
   const goToFeaturesScreen = () => {
     
-   
+
       navigate("/Features");
     
   };

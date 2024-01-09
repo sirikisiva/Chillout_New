@@ -114,12 +114,11 @@
   height: auto;
   position: relative;
   border:1px solid lightgray;
-  border-radius:8px ;
+  border-radius:8px;
   box-shadow:0 0.188em 1.550em egb(156,156,156);
   padding-top: 20px;
 }
 .inputContainer{
- 
   display: flex;
   flex-direction: column;
   height: 5em;
@@ -138,7 +137,6 @@
   border-radius: 0.25em;
   text-align: center;
   padding: 2em;
- 
 }
 .checkboxSignup {
   align-self: flex-start;
@@ -157,8 +155,6 @@
   border: none;
   border-radius: 8px;
   background-color: #7518a7;
-  
-  
   box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px,
     rgba(0, 0, 0, 0.05) 0px 5px 10px;
 }
