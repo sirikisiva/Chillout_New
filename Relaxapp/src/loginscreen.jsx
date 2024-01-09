@@ -37,11 +37,11 @@ const LoginScreen = () => {
     navigate("/ForgotPasswordScreen");
   };
 
-  const goToFeaturesScreen = (e) => {
-    e.preventDefault();
-    if (validateForm()) {
+  const goToFeaturesScreen = () => {
+    
+   
       navigate("/Features");
-    }
+    
   };
   const handleFocus = () => {
     setIsFocused(true);
@@ -50,7 +50,7 @@ const LoginScreen = () => {
   // const handleBlur = () => {
   //   setIsFocused(false);
   // };
-  const validateForm = () => {
+  // const validateForm = () => {
     // let isValid = true;
     // const newErrors = { ...errors };
 
@@ -70,7 +70,7 @@ const LoginScreen = () => {
 
     // setErrors(newErrors);
     // return isValid;
-  };
+  // };
   const handleEmailInputChange = (e) => {
     const inputValue = e.target.value;
     const val = regex[0].email.test(e.target.value);
@@ -212,7 +212,7 @@ const LoginScreen = () => {
                 </div>
               </div>
 
-              <button className="signInBtn" onClick={(e) => goToFeaturesScreen(e)}>
+              <button className="signInBtn" onClick={ goToFeaturesScreen}>
                 Login
               </button>
               <button className="signInBtn">Login with Company Email</button>
