@@ -1,67 +1,29 @@
-
-.loginBtn{
-  display: flex;
-  color: #6f00ff;
-  text-align: flex-end
-}
-
-.signupLogo{
-  width: 20vh;
-  align-items: flex-start;
-}
+/* 
 .signUpScreen{
+  height: 100vh;
+  width: 100%;
   display: flex;
   flex-direction: row;
+  justify-content:space-around; 
+  flex-wrap: wrap;
+}
 
-  height: 100vh;
-}
-.firstView{
-  width: 35%;
-  margin: 150px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  padding: 30px;
-  /* border: 1px solid black; */
-  /* background-color: rgba(255, 251, 188, 0.521); */
-}
-.secondView{
-  width: 65%; 
-  display: flex;
-  align-items: center;
-  justify-content: start;
-  /* border: 1px solid black; */
-}
+
 .signUpCard{
   display: flex;
   flex-direction: column;
-  width: 50%;
-  height: 80vh;
-  background-color: rgba(8, 8, 8, 0.178);
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #00000028;
+  width: 30em;
+  height: 30em;
+  position: relative;
+  border: 1px solid lightgray;
+  box-shadow: 0 0.188em 1.55em egb(156, 156, 156);
+  padding-top: 20px;
+  border: 10px solid red;
 }
-.viewOne{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  height: 20%;
-  text-align: start;
-  padding: 50px;
-  
-}
-.viewTwo{
-  height: 30%;
-  padding: 55px;
-  margin-top: 20px;
-  /* background-color: rgb(0, 47, 255); */
-}
-.viewThree{
-  height: 30%;
-  
-  /* background-color: rgb(0, 255, 42); */
-}
-.clickHere{
-  align-self: center;
-}
+
 .signUpBtn{
   margin-top: 60px;
   text-align: center;
@@ -75,12 +37,40 @@
   color: white;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px,
     rgba(0, 0, 0, 0.05) 0px 5px 10px;
-}
-.signupbox2{
-  height: 28vh;
+} 
+.signUpCard {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #00000028;
+  width: 30em;
+  height: auto;
+  position: relative;
+  border: 1px solid lightgray;
+  box-shadow: 0 0.188em 1.55em egb(156, 156, 156);
+  padding-top: 20px;
+}
+
+
+.signUpInpContainer {
+  display: flex;
+  flex-direction: row;
+  height: 7em;
+  border: 1px solid red;
+}
+.signUpInputStyle {
+  border: none;
+  background-color: rgb(255, 255, 255);
+  height: 4em;
+  width: 22em;
+  border-radius: 0.25em;
+  text-align: center;
+  padding: 2em;
+}
+.signUpInputBox {
+  
+  height: auto;
 }
 .signupRegHere{
   cursor: pointer;
@@ -90,14 +80,126 @@
 .clickHere{
   cursor: pointer;
 }
+
+
+
+*/
+@media only screen and (max-width: 960px){
+
+.signUpScreen {
+    display: flex;
+    flex-direction: column-reverse;
+}}
+
+.signUpScreen{
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items:center;
+  flex-wrap: wrap;
+}
+.error-message{
+  color: #EF4040;
+}
+
+.signUpCard{
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content: space-evenly;
+  background-color: #0000001e;
+  width: 30em;
+  height: auto;
+  position: relative;
+  border:1px solid lightgray;
+  border-radius:8px ;
+  box-shadow:0 0.188em 1.550em egb(156,156,156);
+  padding-top: 20px;
+}
+.inputContainer{
+ 
+  display: flex;
+  flex-direction: column;
+  height: 5em;
+  /* border: 1px solid red; */
+}
+.inputLabel {
+  font-size: 15px;
+  color: #ffffff;
+  margin-bottom: 5px;
+}
+.InputStyle{
+  border: none;
+  background-color: rgb(255, 255, 255);
+  height: 4em;
+  width: 22em;
+  border-radius: 0.25em;
+  text-align: center;
+  padding: 2em;
+ 
+}
 .checkboxSignup {
   align-self: flex-start;
   cursor: pointer;
+  margin-right: 1em;
   width: 20px;
   height: 20px;
 }
 .lineContainerSignup {
   display: flex;
   flex-direction: row;
+} 
+.signInBtn {
+  height: 4em;
+  /* width: 22em; */
+  border: none;
+  border-radius: 8px;
+  background-color: #7518a7;
+  
+  
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px,
+    rgba(0, 0, 0, 0.05) 0px 5px 10px;
 }
+.signUpContainer{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.titleBox{
+  /* border: 1px solid red; */
+  text-align: center;
+  height: 100px;
+}
+.inputsBox{
+  /* border: 1px solid red; */
+  height: auto;
+}
+.btnBox{
+  /* border: 1px solid red; */
+  /* margin-top: 2rem; */
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 200px;
+}
+.backToLoginBtn{
+  height: 20px;
+}
+
+
+.titleAnim {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  color: rgb(0, 0, 0);
+}
+
+
+
+
+
 

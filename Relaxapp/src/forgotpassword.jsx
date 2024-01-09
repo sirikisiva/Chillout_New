@@ -24,6 +24,7 @@ const ForgotPasswordScreen = () => {
   const handleOnEmailInputChange = (e) => {
     const val = regex[0].email.test(e.target.value);
     setEmail({ ...email, val: e.target.value, valid: val });
+    
   };
 
   const handleOnOtpInputChange = (e) => {
@@ -108,7 +109,7 @@ const ForgotPasswordScreen = () => {
       {email.errorMessage === "validEmail" && email.verify === true ? (
         <div className="fpCard">
           <div className="titleBox">
-            <h1>{otp.valid === true ? "true" : "false"}</h1>
+            <h3>Forgot Password</h3>
             <p>If registered you'll receive OTP</p>
           </div>
           <div className="inputsBox">
@@ -146,7 +147,7 @@ const ForgotPasswordScreen = () => {
       ) : (
         <div className="fpCard">
           <div className="titleBox">
-            <h1>Forgot Password</h1>
+            <h3>Forgot Password</h3>
             <p>OTP will be sent to your registered email</p>
           </div>
           <div className="inputsBox">

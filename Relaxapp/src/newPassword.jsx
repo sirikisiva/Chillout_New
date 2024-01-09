@@ -122,7 +122,7 @@ const NewPassword = () => {
     <div className="newPasswordScreen">
       <div className="npCard">
         <div className="titleBox">
-          <h1>Change Password</h1>
+          <h3>Change Password</h3>
           <p>create strong password & do not set your previous password</p>
         </div>
         <div className="inputsBox">
@@ -171,7 +171,7 @@ const NewPassword = () => {
         </div>
         <div className="loginBtnBox">
           <button
-            className="npSignInBtn"
+            className="npBtn"
             style={{
               color:
                 newPassword.valid && confirmPassword.valid ? "white" : "gray",
