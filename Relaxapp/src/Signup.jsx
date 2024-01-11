@@ -417,7 +417,7 @@ const SignupScreen = () => {
   return (
     <div>
       <div className="signUpScreen">
-        <div className="loginContainer col-6">
+        <div className="signUpContainer col-6">
           <div className="signUpCard">
             <div className="titleBox">
               <div>
@@ -436,6 +436,7 @@ const SignupScreen = () => {
                       name="name"
                       placeholder="enter your fullname"
                       className="inputStyle"
+                      style={{borderColor:(!username.errorActive && !username.verify ) ? "purple" : "red"}}
                       value={username.value}
                       onChange={handleUsernameInputChange}
                       onBlur={handleUsernameInputOnBlur}
@@ -454,6 +455,7 @@ const SignupScreen = () => {
                       name="email"
                       placeholder="enter email Id"
                       className="inputStyle"
+                      style={{borderColor:(!email.errorActive && !email.verify ) ? "purple" : "red"}}
                       value={email.value}
                       onChange={handleEmailInputChange}
                       onBlur={handleEmailInputOnBlur}
@@ -470,6 +472,7 @@ const SignupScreen = () => {
                       type="password"
                       name="password"
                       placeholder="set password"
+                      style={{borderColor:(!password.errorActive && !password.verify ) ? "purple" : "red"}}
                       value={password.value}
                       className="inputStyle"
                       onChange={handlePasswordInputChange}
@@ -487,6 +490,7 @@ const SignupScreen = () => {
                       type="password"
                       name="password"
                       placeholder="confirm password"
+                      style={{borderColor:(!confirmPassword.errorActive && !confirmPassword.verify ) ? "purple" : "red"}}
                       value={confirmPassword.value}
                       className="inputStyle"
                       onChange={handleConfirmPasswordInputChange}

@@ -31,8 +31,11 @@
   height: auto;
   margin-left: 15%;
   margin-right: 15%;
+  height: 100vh;
+  margin-top: 15%;
+  margin-bottom: 15%;
   background-color: #ffffff;
-  padding: 50px;
+  padding: 35px;
   border: none;
   border-radius: 1rem;
   box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
@@ -111,22 +114,21 @@
 .lgTitleBox {
   /* border: 1px solid red; */
   text-align: center;
-  height: 100px;
+  height: 15vh;
 }
 
 .lgInputBox {
-  height: auto;
+  height: 27vh;
   /* border: 1px solid red; */
 }
 .lgBtnBox {
-  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  height: 250px;
+  height: 35vh;
 }
 .signInBtn {
-  height: 4em;
+  height: 7vh;
   color: white;
   border: none;
   border-radius: 8px;
@@ -162,8 +164,7 @@
 .inputContainer {
   display: flex;
   flex-direction: column;
-  height: 6em;
-
+  height: 13.7vh;
   /* border: 1px solid red; */
 }
 

@@ -121,6 +121,7 @@ const ForgotPasswordScreen = () => {
                 value={otp.val}
                 placeholder="enter OTP"
                 className="fpInputStyle"
+                style={{borderColor:(!otp.errorActive ) ? "purple" : "red"}}
                 onChange={handleOnOtpInputChange}
                 onBlur={handleOtpInputOnBlur}
                 maxLength={4}
@@ -136,7 +137,7 @@ const ForgotPasswordScreen = () => {
           <div className="loginBtnBox">
             <button
               className="fpSignInBtn"
-              style={{ color: otp.valid === true ? "white" : "gray" }}
+              style={{ color: otp.valid === true ? "white" : "darkgray" }}
               disabled={otp.valid === true ? false : true}
               onClick={onClickVerifyOtp}
             >
@@ -158,6 +159,7 @@ const ForgotPasswordScreen = () => {
                 name="email"
                 placeholder="enter registered email"
                 className="fpInputStyle"
+                style={{borderColor:(!email.errorActive && !email.verify ) ? "purple" : "red"}}
                 value={email.val}
                 onChange={handleOnEmailInputChange}
                 onBlur={handleEmailInputOnBlur}
@@ -174,7 +176,7 @@ const ForgotPasswordScreen = () => {
             <button
               className="fpSignInBtn"
               style={{
-                color: email.valid === true ? "white" : "gray",
+                color: email.valid === true ? "white" : "darkgray",
               }}
               onClick={onClickGetOtp}
               disabled={email.valid === true ? false : true}

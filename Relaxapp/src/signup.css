@@ -21,11 +21,12 @@
 
 .signUpCard{
   margin-left: 15%;
-  margin-right: 15%;
+    margin-right: 15%;
+    margin-top: 3.7%;
+    margin-bottom: 3.7%;
   /* background:linear-gradient(135deg,rgba(225,225,225,0.1),rgba(225,225,225,0)); */
   background-color: white;
-  padding: 50px;
-  height: 49em;
+  padding: 35px;
   border: none;
   border-radius: 1rem;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
@@ -70,11 +71,12 @@
   box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px,
     rgba(0, 0, 0, 0.05) 0px 5px 10px;
 }
-.signUpContainer{
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
+  .signUpContainer{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
 .titleBox{
   /* border: 1px solid red; */
   text-align: center;
@@ -105,9 +107,26 @@
   position: relative;
   color: rgb(0, 0, 0);
 }
+.signupRegHere{
+  cursor: pointer;
+}
 
-
-
+@media only screen and (max-width:960px){
+  .signUpScreen{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .signUpContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .titleAnim {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}
 
 
 

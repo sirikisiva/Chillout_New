@@ -134,6 +134,7 @@ const NewPassword = () => {
               value={newPassword.password}
               placeholder="enter new password"
               className="npInputStyle"
+              style={{borderColor:(!newPassword.errorActive && !newPassword.verify ) ? "purple" : "red"}}
               onChange={newPasswordOnHandle}
               onBlur={newPasswordValidateOnBlur}
             />
@@ -155,6 +156,7 @@ const NewPassword = () => {
               value={confirmPassword.password}
               placeholder="confirm password"
               className="npInputStyle"
+              style={{borderColor:(!confirmPassword.errorActive && !confirmPassword.verify ) ? "purple" : "red"}}
               disabled={newPassword.valid === true ? false : true}
               onChange={confirmPasswordOnHandle}
               onBlur={confirmPasswordValidateOnBlur}
@@ -174,7 +176,7 @@ const NewPassword = () => {
             className="npBtn"
             style={{
               color:
-                newPassword.valid && confirmPassword.valid ? "white" : "gray",
+                newPassword.valid && confirmPassword.valid ? "white" : "darkgray",
             }}
             disabled={newPassword.valid && confirmPassword.valid ? false : true}
             onClick={onClickResetPassword}
