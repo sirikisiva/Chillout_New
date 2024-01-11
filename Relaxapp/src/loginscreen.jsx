@@ -1,31 +1,22 @@
 import React, { useState } from "react";
 import "./loginscreen.css";
-import {data} from './data'
+import { data } from "./data";
 import { useNavigate } from "react-router-dom";
-
 const LoginScreen = () => {
-  // const [formData, setFormData] = useState({
-  //   name: "",
-  //   password: "",
-  // });
-  const regex = data
-  const [email,setEmail]=useState({
-    value:"",
-    errorActive:true,
-    errorMessage:"",
-    verify:""
-  })
-  const [password,setPassword]=useState({
-    value:"",
-    errorActive:true,
-    errorMessage:"",
-    verify:""
-  })
+  const regex = data;
+  const [email, setEmail] = useState({
+    value: "",
+    errorActive: false,
+    errorMessage: "",
+    verify: false,
+  });
+  const [password, setPassword] = useState({
+    value: "",
+    errorActive: false,
+    errorMessage: "",
+    verify: false,
+  });
   const [isFocused, setIsFocused] = useState(false);
-  // const [errors, setErrors] = useState({
-  //   name: "",
-  //   password: "",
-  // });
 
   const navigate = useNavigate();
 
@@ -38,39 +29,15 @@ const LoginScreen = () => {
   };
 
   const goToFeaturesScreen = () => {
-    
-
-      navigate("/Features");
-    
+    navigate("/Features");
   };
+
+
+
   const handleFocus = () => {
     setIsFocused(true);
   };
 
-  // const handleBlur = () => {
-  //   setIsFocused(false);
-  // };
-  // const validateForm = () => {
-    // let isValid = true;
-    // const newErrors = { ...errors };
-
-    // if (email.value) {
-    //   newErrors.name = "Please enter your name";
-    //   isValid = false;
-    // } else {
-    //   newErrors.name = "";
-    // }
-
-    // if (!formData.password) {
-    //   newErrors.password = "Please enter your password";
-    //   isValid = false;
-    // } else {
-    //   newErrors.password = "";
-    // }
-
-    // setErrors(newErrors);
-    // return isValid;
-  // };
   const handleEmailInputChange = (e) => {
     const inputValue = e.target.value;
     const val = regex[0].email.test(e.target.value);
@@ -84,33 +51,40 @@ const LoginScreen = () => {
 
   const handleEmailInputOnBlur = () => {
     setIsFocused(false);
-    if (email.val === "" || email.val === undefined || email.val === null) {
+    if (
+      email.value === "" ||
+      email.value === undefined ||
+      email.value === null
+    ) {
       setEmail({
         ...email,
         errorActive: true,
         errorMessage: "Please enter registered email Id",
       });
-    } else if (email.val.match(regex[0].email)) {
+      console.log(`${email.errorMessage} ===> error ==> ${email.errorActive}`);
+    } else if (email.value.match(regex[0].email)) {
       setEmail({
         ...email,
         errorActive: false,
         errorMessage: "validEmail",
       });
-      console.log(`It's a Match ${email.errorMessage} `);
+      console.log(
+        `It's a Match ${email.errorMessage} ===> error ==>${email.errorActive}`
+      );
     } else {
       setEmail({
         ...email,
         errorActive: true,
-        errorMessage: "incorrect email ID",
+        errorMessage: "incorrect email Id",
       });
       console.log(
-        `It's not a Matched ${email.errorMessage}  ${email.errorActive}`
+        `It's not a Matched  ${email.errorMessage} ===> error ==>${email.errorActive}`
       );
     }
   };
 
   const handlePasswordInputOnBlur = () => {
-    setIsFocused(false);  
+    setIsFocused(false);
     if (
       password.value === "" ||
       password.value === undefined ||
@@ -138,15 +112,6 @@ const LoginScreen = () => {
     }
   };
 
-  // const handleEmailInputChange = (e) => {
-  //   setEmail({ ...email, value: e.target.value });
-  //   validateForm();
-  // };
-  // const handlePasswordInputChange = (e) => {
-  //   setPassword({ ...password, value: e.target.value });
-  //   validateForm();
-  // };
-
   return (
     <div className="loginScreen d-flex">
       <div className="loginContainer col-6">
@@ -162,17 +127,18 @@ const LoginScreen = () => {
             <div className="lgInputBox">
               <div className="inputContainer">
                 <div>
-                <label className="inputLabel">Email</label>
-                <input
-                  type="text"
-                  name="name"
-                  placeholder="enter email Id"
-                  className="inputStyle"
-                  value={email.value}
-                  onChange={handleEmailInputChange}
-                  onFocus={handleFocus}
-                  onBlur={handleEmailInputOnBlur}
-                />
+                  <label className="inputLabel">Email</label>
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="enter email Id"
+                    className="inputStyle"
+                    style={{borderColor:(!email.errorActive && !email.verify ) ? "purple" : "red"}}
+                    value={email.value}
+                    onChange={handleEmailInputChange}
+                    onFocus={handleFocus}
+                    onBlur={handleEmailInputOnBlur}
+                  />
                 </div>
                 {email.errorActive && (
                   <div className="error-message">{email.errorMessage}</div>
@@ -181,17 +147,18 @@ const LoginScreen = () => {
 
               <div className="inputContainer">
                 <div>
-                <label className="inputLabel">Password</label>
-                <input
-                  type="password"
-                  name="password"
-                  placeholder="enter password"
-                  className="inputStyle"
-                  value={password.value}
-                  onChange={handlePasswordInputChange}
-                  onFocus={handleFocus}
-                  onBlur={handlePasswordInputOnBlur}
-                />
+                  <label className="inputLabel">Password</label>
+                  <input
+                    type="password"
+                    name="password"
+                    placeholder="enter password"
+                    className="inputStyle"
+                    style={{borderColor:(!password.errorActive && !password.verify ) ? "purple" : "red"}}
+                    value={password.value}
+                    onChange={handlePasswordInputChange}
+                    onFocus={handleFocus}
+                    onBlur={handlePasswordInputOnBlur}
+                  />
                 </div>
                 {password.errorActive && (
                   <div className="error-message">{password.errorMessage}</div>
@@ -212,16 +179,21 @@ const LoginScreen = () => {
                 </div>
               </div>
 
-              <button className="signInBtn" onClick={ goToFeaturesScreen}>
+              <button className="signInBtn" onClick={goToFeaturesScreen}>
                 Login
               </button>
-              <button className="signInBtn">Login with Company Email</button>
+              <div className="logButons">
+                <button className="logBtn1"></button>
+                <button className="logBtn2"></button>
+                <button className="logBtn3"></button>
+              </div>
             </div>
           </form>
 
           <div>
-            <h6 className="regHere" onClick={goToSignupScreen}>
-              Don't have an account? <span className="regBtn"> Register/SignUp</span>
+            <h6 className="regHere" >
+              Don't have an account?{" "}
+              <span className="regBtn" onClick={goToSignupScreen}> Register/SignUp</span>
             </h6>
           </div>
         </div>
@@ -234,3 +206,5 @@ const LoginScreen = () => {
 };
 
 export default LoginScreen;
+
+

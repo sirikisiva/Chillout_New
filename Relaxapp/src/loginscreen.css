@@ -9,7 +9,7 @@
 .caption {
   color: rgb(0, 0, 0);
 }
-.regHere{
+.regHere {
   cursor: pointer;
   padding-top: 10px;
 }
@@ -20,7 +20,6 @@
 .loginScreen {
   display: flex;
   flex-direction: row;
-
 }
 .loginContainer {
   height: 100vh;
@@ -29,13 +28,15 @@
   flex-direction: column;
 }
 .card {
+  height: auto;
   margin-left: 15%;
   margin-right: 15%;
-  background-color: #ffffff25;
+  background-color: #ffffff;
   padding: 50px;
   border: none;
   border-radius: 1rem;
-  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
 .titleAnim {
   display: flex;
@@ -107,16 +108,7 @@
   }
 }
 
-/* .box1 {
-  height: 10vh;
-  margin-bottom: 4.5vh;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: end;
-  border: 1px solid red;
-} */
-.lgTitleBox{
+.lgTitleBox {
   /* border: 1px solid red; */
   text-align: center;
   height: 100px;
@@ -130,16 +122,15 @@
   height: auto;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  height: 200px;
-  
+  justify-content: space-around;
+  height: 250px;
 }
 .signInBtn {
   height: 4em;
- color: white;
+  color: white;
   border: none;
   border-radius: 8px;
-  background-color: #7743DB;
+  background-color: #7743db;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px,
     rgba(0, 0, 0, 0.05) 0px 5px 10px;
 }
@@ -157,9 +148,9 @@
   /* background-color: #7518a7; */
   width: 50%;
 }
-.forgotPassword{
-    padding-top: 8px;
-    cursor: pointer;
+.forgotPassword {
+  padding-top: 8px;
+  cursor: pointer;
 }
 .lineContainer {
   display: flex;
@@ -172,7 +163,7 @@
   display: flex;
   flex-direction: column;
   height: 6em;
-  
+
   /* border: 1px solid red; */
 }
 
@@ -181,33 +172,65 @@
   display: flex;
   flex-direction: column;
   border: none;
-  height: 5.0vh;
+  height: 5vh;
   padding-left: 10px;
   border: 0px solid;
   border-bottom: 1px solid rgb(9, 9, 9);
   width: 100%;
 }
 
-
 input:focus {
-    outline:none;
+  outline: none;
 }
 .inputLabel {
   font-size: 15px;
   color: #000000;
   margin-bottom: 5px;
-  
 }
-.error-message{
-  color: #C70039;
+.error-message {
+  color: #c70039;
   padding-left: 10px;
 }
-@media only screen and (max-width:960px){
-  .loginScreen{
+.logButons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 10px;
+}
+.logBtn1 {
+  background-image: url("../public/google.png");
+  height: 40px;
+  width: 40px;
+  background-size: cover;
+  background-position: center;
+  border: none;
+  background-color: transparent;
+}
+.logBtn2 {
+  background-image: url("../public/facebook.png");
+  height: 40px;
+  width: 40px;
+  background-size: cover;
+  background-position: center;
+  border: none;
+  background-color: transparent;
+}
+.logBtn3 {
+  background-image: url("../public/linkedin.png");
+  height: 40px;
+  width: 40px;
+  background-size: cover;
+  background-position: center;
+  border: none;
+  background-color: transparent;
+}
+@media only screen and (max-width: 960px) {
+  .loginScreen {
     display: flex;
     flex-direction: column-reverse;
   }
-  .loginContainer{
+  .loginContainer {
     width: 100%;
     display: flex;
     justify-content: center;

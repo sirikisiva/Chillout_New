@@ -1,89 +1,4 @@
-/* 
-.signUpScreen{
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content:space-around; 
-  flex-wrap: wrap;
-}
 
-
-.signUpCard{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  background-color: #00000028;
-  width: 30em;
-  height: 30em;
-  position: relative;
-  border: 1px solid lightgray;
-  box-shadow: 0 0.188em 1.55em egb(156, 156, 156);
-  padding-top: 20px;
-  border: 10px solid red;
-}
-
-.signUpBtn{
-  margin-top: 60px;
-  text-align: center;
-  align-self: center;
-  height: 6vh;
-  width: 100%;
-  border: none;
-  border-width: 1px 1px;
-  border-radius: 8px;
-  background-color: #7518a7;
-  color: white;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px,
-    rgba(0, 0, 0, 0.05) 0px 5px 10px;
-} 
-.signUpCard {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  background-color: #00000028;
-  width: 30em;
-  height: auto;
-  position: relative;
-  border: 1px solid lightgray;
-  box-shadow: 0 0.188em 1.55em egb(156, 156, 156);
-  padding-top: 20px;
-}
-
-
-.signUpInpContainer {
-  display: flex;
-  flex-direction: row;
-  height: 7em;
-  border: 1px solid red;
-}
-.signUpInputStyle {
-  border: none;
-  background-color: rgb(255, 255, 255);
-  height: 4em;
-  width: 22em;
-  border-radius: 0.25em;
-  text-align: center;
-  padding: 2em;
-}
-.signUpInputBox {
-  
-  height: auto;
-}
-.signupRegHere{
-  cursor: pointer;
-  padding-top: 10px;
-  margin-bottom: -1rem;
-}
-.clickHere{
-  cursor: pointer;
-}
-
-
-
-*/
 @media only screen and (max-width: 960px){
 
 .signUpScreen {
@@ -92,7 +7,7 @@
 }}
 
 .signUpScreen{
-  height: 100vh;
+  height: auto;
   width: 100%;
   display: flex;
   justify-content: space-around;
@@ -105,18 +20,15 @@
 }
 
 .signUpCard{
-  display: flex;
-  flex-direction: column;
-  align-items:center;
-  justify-content: space-evenly;
-  background-color: #0000001e;
-  width: 30em;
-  height: auto;
-  position: relative;
-  border:1px solid lightgray;
-  border-radius:8px;
-  box-shadow:0 0.188em 1.550em egb(156,156,156);
-  padding-top: 20px;
+  margin-left: 15%;
+  margin-right: 15%;
+  /* background:linear-gradient(135deg,rgba(225,225,225,0.1),rgba(225,225,225,0)); */
+  background-color: white;
+  padding: 50px;
+  height: 49em;
+  border: none;
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
 }
 .inputContainer{
   display: flex;
@@ -126,7 +38,7 @@
 }
 .inputLabel {
   font-size: 15px;
-  color: #ffffff;
+  color: #000000;
   margin-bottom: 5px;
 }
 .InputStyle{
