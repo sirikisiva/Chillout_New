@@ -164,7 +164,7 @@
 .inputContainer {
   display: flex;
   flex-direction: column;
-  height: 13.7vh;
+  height: 12.7vh;
   /* border: 1px solid red; */
 }
 
@@ -189,7 +189,8 @@ input:focus {
   margin-bottom: 5px;
 }
 .error-message {
-  color: #c70039;
+  color: #ef4040;
+  font-size: small;
   padding-left: 10px;
 }
 .logButons {
