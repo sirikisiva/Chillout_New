@@ -1,0 +1,82 @@
+* {
+  margin: 0%;
+  box-sizing: border-box;
+}
+.logoScreen {
+  display: flex;
+  flex-direction: row;
+
+  height: 100vh;
+}
+.signIn {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -35%);
+  transition: all 0.5s ease;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  text-align: center;
+  line-height: 1;
+  border: 1px solid black;
+  /* border-radius: 30px; */
+  color: #000000;
+  font-size: 20px;
+  padding: 20px 50px 20px 50px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  /* margin-top: 20px; */
+}
+.signIn:hover {
+  background-color: #9131ff;
+  color: #ffffff;
+  border-color: white;
+  /* border-radius: 30px; */
+  scale: 1.05;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.signIn::after {
+  background-color: #00000050;
+  width: 0;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+  z-index: -1;
+}
+
+.signIn:hover::after {
+  width: 100%;
+}
+
+.startLogo {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  color: rgb(0, 0, 0);
+}
+.logoWithName{
+  display: flex;
+  justify-content: center;
+  width: 30%;
+}
+.startContent {
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid blue;
+  border-color: slategray;
+  padding: 20px;
+  width: 35%;
+}
+.startContent2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  width: 35%;
+}
+.logoWidth{
+  width: 70%;
+}
