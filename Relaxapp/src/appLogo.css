@@ -1,0 +1,7 @@
+.appLogo{
+    height: 50vh;
+}
+.video{
+    object-fit: fill;
+    width: 100%;
+}
