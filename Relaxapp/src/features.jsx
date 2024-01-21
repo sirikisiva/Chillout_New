@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import UserDetails from "./userDetails";
 import AppLogo from "./appLogo";
 import FeaturesCard from "./featurescard";
-
+import SideBar from "./SideBar"
 const Features = () => {
   const navigate = useNavigate();
   const [isExpanded, setIsExpanded] = useState(false);
@@ -80,14 +80,15 @@ const Features = () => {
 
   const containerRef = useRef(null);
 
-  const scrollBy = (scrollAmount) => {
-    if (containerRef.current) {
-      containerRef.current.scrollLeft += scrollAmount;
-    }
-  };
+  // const scrollBy = (scrollAmount) => {
+  //   if (containerRef.current) {
+  //     containerRef.current.scrollLeft += scrollAmount;
+  //   }
+  // };
 
   return (
     <div>
+      <SideBar/>
       {/* <div className='heading'>CHILL OUT</div>
       <div className='subHeading'> Pick your favorite genres and let your soul relax! </div>
       <div className='bees' title="Click to scroll for more features">
@@ -98,16 +99,17 @@ const Features = () => {
         <FeaturesCard cards={cards} onCardClick={goToIndividualScreens}></FeaturesCard>
       </div> */}
 
+
       <div  className="d-flex">
-        <div className={`col-${isExpanded ? 2 : 1}`}  >
+        <div className={`${isExpanded ? "menu-min" : "menu-max"}`}  >
         <div className="toggleIcon">
-            <img  onClick={toggleScreen} className="toggleWidth" src={isExpanded ? './rightArrow.png' : './leftArrow.png'}></img>
+            <img  onClick={toggleScreen} className="toggleWidth" src={isExpanded ? './rightArrow.png' : './leftArrow.png'}height={30} width={30} alt="arrow png"/>
         </div>
-          <UserDetails></UserDetails>
+        <UserDetails ButtonProps={isExpanded }></UserDetails>
         </div>
-        <div className={`col-${isExpanded ? 10 : 11}`}>
+        <div className={`${isExpanded ? "screen-min" : "screen-max"}`}>
           <div>
-            <AppLogo></AppLogo>
+            <AppLogo></AppLogo> 
           </div>
           <div>
         

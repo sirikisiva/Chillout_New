@@ -92,3 +92,15 @@
     display: flex;
     justify-content: flex-end;
 }
+.menu-min{
+    width: 5vw;
+}
+.menu-max{
+    width: 12vw;
+}
+.screen-min{
+    width: 95vw;
+}
+.screen-max{
+    width: 85vw;
+}
