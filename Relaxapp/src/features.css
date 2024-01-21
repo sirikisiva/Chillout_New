@@ -96,11 +96,15 @@
     width: 5vw;
 }
 .menu-max{
-    width: 12vw;
+    width: 15vw;
 }
 .screen-min{
     width: 95vw;
 }
 .screen-max{
     width: 85vw;
+}
+.bg{
+    background-color: #000;
+    height: 100%;
 }

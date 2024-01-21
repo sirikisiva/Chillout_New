@@ -67,6 +67,10 @@
     font-weight: bold;
     cursor: pointer;
   }
- a:hover{
-    color: #710192 !important;
- } 
+ /* a:hover{
+    color: #fff !important;
+    background-color: #710192;
+    border: 1px solid #710192;
+    width: 100%;
+    border-radius: 8px;
+ }  */

@@ -7,18 +7,25 @@ import { FaHotTubPerson } from "react-icons/fa6";
 import { LiaUserFriendsSolid } from "react-icons/lia";
 import { PiBooks } from "react-icons/pi";
 import { BsCameraReels } from "react-icons/bs";
+import { GoPlay } from "react-icons/go";
 import { RiSettings3Line } from "react-icons/ri";
 import { CiLogout } from "react-icons/ci";
 import { IoPersonCircleOutline } from "react-icons/io5";
+import { IoBookOutline } from "react-icons/io5";
+import { RiSpeakLine } from "react-icons/ri";
+import { GiMeditation } from "react-icons/gi";
 
 const SideBar = () => {
   const [containerWidth, setContainerWidth] = useState(false);
+  const [profileText, setProfileText] = useState(false);
   const handleContainerHover = () => {
     setContainerWidth(true);
+    setProfileText(true);
   };
 
   const handleContainerLeave = () => {
     setContainerWidth(false);
+    setProfileText(false);
   };
 
   const handleLinkItemClick = (index) => {
@@ -33,13 +40,13 @@ const SideBar = () => {
       className="SideBarContainer"
       onMouseOver={handleContainerHover}
       onMouseLeave={handleContainerLeave}
-      style={{ width: containerWidth ? "12vw" : "5vw" }}
+      style={{ width: containerWidth ? "15vw" : "5vw" }}
     >
       <div class="profile">
         <IoPersonCircleOutline size="2em" />
-        <div className=" profileName">
+        <div className={`profileName ${profileText ? 'visible' : 'hidden'}`}>
           <span>FullName</span>
-          <span>profile</span>
+          {/* <span>profile</span> */}
         </div>
       </div>
       <div className="link-item-container">
@@ -57,7 +64,7 @@ const SideBar = () => {
             {containerWidth ? (
               <span className="link-title">Meditation</span>
             ) : (
-              <BsUniversalAccessCircle size="1.5em" />
+              <GiMeditation size="1.5em" />
             )}
           </Link>
         </div>
@@ -66,7 +73,7 @@ const SideBar = () => {
             {containerWidth ? (
               <span className="link-title">Motivation</span>
             ) : (
-              <FaHotTubPerson size="1.5em" />
+              <RiSpeakLine size="1.5em" />
             )}
           </Link>
         </div>
@@ -84,7 +91,8 @@ const SideBar = () => {
             {containerWidth ? (
               <span className="link-title">Books</span>
             ) : (
-              <PiBooks size="1.5em" />
+              // <PiBooks size="1.5em" />
+              <IoBookOutline  size="1.5em"/>
             )}
           </Link>
         </div>
@@ -93,7 +101,7 @@ const SideBar = () => {
             {containerWidth ? (
               <span className="link-title">Reels</span>
             ) : (
-              <BsCameraReels size="1.5em" />
+              <GoPlay size="1.5em" />
             )}
           </Link>
         </div>
