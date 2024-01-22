@@ -87,7 +87,7 @@ const Features = () => {
   // };
 
   return (
-    <div>
+    <div className="featuresScreen">
 
       {/* <div className='heading'>CHILL OUT</div>
       <div className='subHeading'> Pick your favorite genres and let your soul relax! </div>
@@ -101,7 +101,7 @@ const Features = () => {
 
 
       <div  className="d-flex bg">
-        <div className={`${isExpanded ? "menu-min" : "menu-max"}`}  >
+        <div>
         <SideBar/>
         {/* <div className="toggleIcon">
             <img  onClick={toggleScreen} className="toggleWidth" src={isExpanded ? './rightArrow.png' : './leftArrow.png'}height={30} width={30} alt="arrow png"/>

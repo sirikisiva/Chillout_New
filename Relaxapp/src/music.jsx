@@ -1,14 +1,14 @@
 import React from 'react';
-import SideMenu from './sidemenu';
 import './features.css';
 import DisplayMusic from './displaymusic';
+import SideBar from './SideBar';
 
 
 const Music = () => {
   return(
-    <div className='d-flex'>
-      <div className='col-3 side-menu'>
-        <SideMenu></SideMenu>
+    <div className='d-flex' >
+      <div className='side-menu'>
+        <SideBar/>
       </div>
       <div className='col-9'>
         <DisplayMusic></DisplayMusic>

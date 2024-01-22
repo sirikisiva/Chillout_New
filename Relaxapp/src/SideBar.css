@@ -15,7 +15,7 @@
   border-radius: 10px;
   transition: all 0.3s ease;
   /* background-color: rgb(255, 255, 255); */
-  background-color: purple;
+  background-color: #5f9fff;
   box-shadow: rgba(250, 248, 248, 0.15) 2.4px 2.4px 3.2px;
    /* box-shadow: rgba(250, 248, 248, 0.3) 0px 19px 38px, rgba(247, 244, 244, 0.22) 0px 15px 12px;; */
   
@@ -69,10 +69,10 @@
 }
 
 .link-item:hover {
-  color: white !important;
+  color: rgb(0, 0, 0) !important;
     border: none;
     border-radius: 8px;
-    background-color: #5f9fff;
+    background-color: #b3d1ff;
     text-decoration: none;
   width: 10vw;
   height: 40px;

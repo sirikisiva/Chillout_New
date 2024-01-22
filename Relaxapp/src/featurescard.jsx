@@ -7,8 +7,10 @@ const FeaturesCard = ({ cards, onCardClick }) => {
             {cards.map((card, index) => (
                 <div key={index} onClick={() => onCardClick(card.id)} className="feature-card">
                     <div className='imgDiv'><img className='feature-img' src={card.img}></img></div>
-                    <div className="feature-name">{card.name}</div>
-                    <div className="feature-desc">{card.desc}</div>
+                    <span className="feature-name">{card.name}</span>
+                    {/* <div className="feature-desc">{card.desc} */}
+                    <span className='card-link'>Click Open</span>
+                    {/* </div> */}
                 </div>
             ))}
         </div>

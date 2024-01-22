@@ -2,11 +2,7 @@ import React, { useState } from "react";
 import "./SideBar.css";
 import { Link } from "react-router-dom";
 import { CiMusicNote1 } from "react-icons/ci";
-import { BsUniversalAccessCircle } from "react-icons/bs";
-import { FaHotTubPerson } from "react-icons/fa6";
 import { LiaUserFriendsSolid } from "react-icons/lia";
-import { PiBooks } from "react-icons/pi";
-import { BsCameraReels } from "react-icons/bs";
 import { GoPlay } from "react-icons/go";
 import { RiSettings3Line } from "react-icons/ri";
 import { CiLogout } from "react-icons/ci";
@@ -14,6 +10,7 @@ import { IoPersonCircleOutline } from "react-icons/io5";
 import { IoBookOutline } from "react-icons/io5";
 import { RiSpeakLine } from "react-icons/ri";
 import { GiMeditation } from "react-icons/gi";
+import { RiHome3Line } from "react-icons/ri";
 
 const SideBar = () => {
   const [containerWidth, setContainerWidth] = useState(false);
@@ -28,13 +25,13 @@ const SideBar = () => {
     setProfileText(false);
   };
 
-  const handleLinkItemClick = (index) => {
-    // Handle link item click
-  };
+  // const handleLinkItemClick = (index) => {
+  //   // Handle link item click
+  // };
 
-  const handleDarkModeClick = () => {
-    // Handle dark mode click
-  };
+  // const handleDarkModeClick = () => {
+  //   // Handle dark mode click
+  // };
   return (
     <div
       className="SideBarContainer"
@@ -45,11 +42,20 @@ const SideBar = () => {
       <div class="profile">
         <IoPersonCircleOutline size="2em" />
         <div className={`profileName ${profileText ? 'visible' : 'hidden'}`}>
-          <span>FullName</span>
-          {/* <span>profile</span> */}
+          <span>Profile</span>
+          <h6>Username</h6>
         </div>
       </div>
       <div className="link-item-container">
+      <div className="link-item">
+          <Link className="sbLink" to="/Features">
+            {containerWidth ? (
+              <span className="link-title"> Home</span>
+            ) : (
+              <RiHome3Line size="1.5em" />
+            )}
+          </Link>
+        </div>
         <div className="link-item">
           <Link className="sbLink" to="/Music">
             {containerWidth ? (
