@@ -25,13 +25,7 @@ const SideBar = () => {
     setProfileText(false);
   };
 
-  // const handleLinkItemClick = (index) => {
-  //   // Handle link item click
-  // };
 
-  // const handleDarkModeClick = () => {
-  //   // Handle dark mode click
-  // };
   return (
     <div
       className="SideBarContainer"

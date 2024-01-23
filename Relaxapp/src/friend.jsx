@@ -7,13 +7,12 @@ import SideBar from './SideBar';
 const Friend = () => {
   return(
     <div className='d-flex'>
-      <div className='side-menu'>
+      <div className='side-menu col-2'>
         <SideBar/>
       </div>
-      <div className='col-9'>
+      <div className='col-10'>
       <DisplayFriends></DisplayFriends>
-      </div>
-     
+      </div>     
     </div>
   )
 

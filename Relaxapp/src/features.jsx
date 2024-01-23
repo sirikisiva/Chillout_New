@@ -4,16 +4,22 @@ import { useNavigate } from "react-router-dom";
 import UserDetails from "./userDetails";
 import AppLogo from "./appLogo";
 import FeaturesCard from "./featurescard";
-import SideBar from "./SideBar"
+import SideBar from "./SideBar";
 const Features = () => {
   const navigate = useNavigate();
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [sidebarWidth, setSidebarWidth] = useState(5);
+  const [featureBoxWidth, setFeatureBoxWidth] = useState(95);
 
-  const toggleScreen = () => {
-    setIsExpanded(!isExpanded);
+  const handleMouseEnter = () => {
+    setSidebarWidth(15);
+    setFeatureBoxWidth(85);
   };
 
-
+  const handleMouseLeave = () => {
+    setSidebarWidth(5);
+    setFeatureBoxWidth(95);
+  };
+ 
   const cards = [
     {
       id: "music",
@@ -78,59 +84,25 @@ const Features = () => {
     }
   };
 
-  const containerRef = useRef(null);
-
-  // const scrollBy = (scrollAmount) => {
-  //   if (containerRef.current) {
-  //     containerRef.current.scrollLeft += scrollAmount;
-  //   }
-  // };
-
   return (
     <div className="featuresScreen">
-
-      {/* <div className='heading'>CHILL OUT</div>
-      <div className='subHeading'> Pick your favorite genres and let your soul relax! </div>
-      <div className='bees' title="Click to scroll for more features">
-        <div onClick={() => (scrollBy(-200))}><img className='leftBee' src="./move.png" alt="Left Bee" /></div>
-        <div onClick={() => (scrollBy(200))}><img className='rightBee' src="./move.png" alt="Right Bee" /></div>
+      <div className="sideBarWidth"  style={{ width: `${sidebarWidth}vw` }}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}>
+        <SideBar />
       </div>
-      <div ref={containerRef} className="featuresBox">
-        <FeaturesCard cards={cards} onCardClick={goToIndividualScreens}></FeaturesCard>
-      </div> */}
 
-
-      <div  className="d-flex bg">
+    
+        <div className="featuresBox"  style={{ width: `${featureBoxWidth}vw` }}>
         <div>
-        <SideBar/>
-        {/* <div className="toggleIcon">
-            <img  onClick={toggleScreen} className="toggleWidth" src={isExpanded ? './rightArrow.png' : './leftArrow.png'}height={30} width={30} alt="arrow png"/>
-        </div> */}
-        {/* <UserDetails ButtonProps={isExpanded }></UserDetails> */}
-        </div>
-        <div className={`${isExpanded ? "screen-min" : "screen-max"}`}>
-          <div>
             <AppLogo></AppLogo> 
           </div>
-          <div>
-        
-            {/* <div className="bees" title="Click to scroll for more features">
-              <div onClick={() => scrollBy(-200)}>
-                <img className="leftBee" src="./move.png" alt="Left Bee" />
-              </div>
-              <div onClick={() => scrollBy(200)}>
-                <img className="rightBee" src="./move.png" alt="Right Bee" />
-              </div>
-            </div> */}
-            <div ref={containerRef} className="featuresBox">
-              <FeaturesCard
-                cards={cards}
-                onCardClick={goToIndividualScreens}
-              ></FeaturesCard>
-            </div>
-          </div>
+          <FeaturesCard
+            cards={cards}
+            onCardClick={goToIndividualScreens}
+          ></FeaturesCard>
         </div>
-      </div>
+     
     </div>
   );
 };

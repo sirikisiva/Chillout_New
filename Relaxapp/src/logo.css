@@ -28,7 +28,8 @@
   /* margin-top: 20px; */
 }
 .signIn:hover {
-  background-color: var(--purple);
+  /* background-color: var(--purple); */
+  background-color: #9131ff;
   color: #ffffff;
   border: none;
   /* border-radius: 30px; */

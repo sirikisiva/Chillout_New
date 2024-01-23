@@ -7,10 +7,10 @@ import SideBar from './SideBar';
 const Music = () => {
   return(
     <div className='d-flex' >
-      <div className='side-menu'>
+      <div className='side-menu col-2'>
         <SideBar/>
       </div>
-      <div className='col-9'>
+      <div className='col-10'>
         <DisplayMusic></DisplayMusic>
       </div>
       
