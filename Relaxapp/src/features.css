@@ -48,7 +48,11 @@
   transition: filter 0.3s ease-in-out;
 }
 .feature-card:hover {
-  height: 450px;
+  /* height: 450px; */
+}
+.blurDiv{
+  padding-bottom: 2.6rem;
+  padding-top: 0.8rem;
 }
 
 .feature-img {
@@ -70,10 +74,10 @@
 }
 .card-link {
   position: absolute;
-  bottom: 5px;
+  bottom: -5px;
   left: 14%;
   color: #fff;
-  border-radius: 10px;
+  border-radius: 5px;
   background-color: #9131ff;
   display: flex;
   justify-content: center;

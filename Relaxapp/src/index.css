@@ -3,9 +3,8 @@ body {
   font-family:  "Poppins", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  background: rgb(206,179,255);
-background: linear-gradient(90deg, rgba(206,179,255,1) 0%, #fce3fc 66%, rgba(220,240,255,1) 100%);
+  background: rgb(187,184,226);
+  background: linear-gradient(90deg, rgba(187,184,226,1) 0%, rgba(189,138,245,1) 49%, rgba(187,184,226,1) 100%);
 }
 
 code {

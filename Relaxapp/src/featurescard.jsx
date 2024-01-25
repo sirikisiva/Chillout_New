@@ -35,7 +35,7 @@ const FeaturesCard = ({ cards, onCardClick }) => {
                         <span className="feature-name">{card.name}</span>
                         <div className="feature-desc">{card.desc}</div>
                     </div>
-                    {linkOpen[index] && <span className='card-link'>Deep dive to chillout!</span>}
+                    {linkOpen[index] && <div className='card-link'>Deep dive to chillout!</div>}
                 </div>
             ))}
         </div>

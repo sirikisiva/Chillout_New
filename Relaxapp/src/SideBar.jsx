@@ -11,10 +11,14 @@ import { IoBookOutline } from "react-icons/io5";
 import { RiSpeakLine } from "react-icons/ri";
 import { GiMeditation } from "react-icons/gi";
 import { RiHome3Line } from "react-icons/ri";
+import  LogOutPopup from './logOutPopup';
 
 const SideBar = () => {
   const [containerWidth, setContainerWidth] = useState(false);
   const [profileText, setProfileText] = useState(false);
+  const [isPopupOpen, setPopupOpen] = useState(false);
+
+
   const handleContainerHover = () => {
     setContainerWidth(true);
     setProfileText(true);
@@ -25,6 +29,14 @@ const SideBar = () => {
     setProfileText(false);
   };
 
+  const openPopup = () => {
+    setPopupOpen(true);
+  };
+
+  const closePopup = () => {
+    setPopupOpen(false);
+  };
+
 
   return (
     <div
@@ -33,7 +45,7 @@ const SideBar = () => {
       onMouseLeave={handleContainerLeave}
       style={{ width: containerWidth ? "15vw" : "5vw" }}
     >
-      <div class="profile">
+      <div className="profile">
         <IoPersonCircleOutline size="2em" />
         <div className={`profileName ${profileText ? 'visible' : 'hidden'}`}>
           <span>Profile</span>
@@ -113,9 +125,11 @@ const SideBar = () => {
         </div>
         <div className="profile">
           <CiLogout size="1.5em" />{" "}
-          {containerWidth && <span className="link-title">Logout</span>}
+          {containerWidth && <span className="link-title" onClick={openPopup}>Logout</span>}
         </div>
       </div>
+
+      {/* <div>{isPopupOpen && <LogOutPopup onClose={closePopup} />}</div> */}
     </div>
   );
 };
