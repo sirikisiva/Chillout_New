@@ -258,10 +258,7 @@ const SignupScreen = () => {
           </div>
         </div>
         <div className="titleAnim col-6">
-          <img src="./logo.gif" alt="logosignup" />
-          {/* <video className="video" loop autoPlay muted playsInline> */}
-        {/* <source src="logo.gif" type="video/mp4" /> */}
-      {/* </video> */}
+        <img src="./chillogo.png" alt="logo" />
         </div>
       </div>
       <div>{isPopupOpen && <UserInfo onClose={closePopup} />}</div>

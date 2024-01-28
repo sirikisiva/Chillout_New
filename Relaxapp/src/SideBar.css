@@ -44,6 +44,10 @@
   color: #ffffff;
   
 }
+.activeClass {
+  background-color: #3498db;
+  color: #fff;
+}
 
 .link-title {
   margin: 2px;

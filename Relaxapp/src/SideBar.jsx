@@ -17,6 +17,7 @@ const SideBar = () => {
   const [containerWidth, setContainerWidth] = useState(false);
   const [profileText, setProfileText] = useState(false);
   const [isPopupOpen, setPopupOpen] = useState(false);
+  const [active, setActive] = useState('');
 
 
   const handleContainerHover = () => {
@@ -28,6 +29,10 @@ const SideBar = () => {
     setContainerWidth(false);
     setProfileText(false);
   };
+
+  const activeLink = (link) =>{
+     setActive(link);
+  }
 
   const openPopup = () => {
     setPopupOpen(true);
@@ -54,7 +59,7 @@ const SideBar = () => {
       </div>
       <div className="link-item-container">
       <div className="link-item">
-          <Link className="sbLink" to="/Features">
+          <Link className={`sbLink ${ (active === 'Features') ? 'activeClass' : ''  }` } to="/Features">
             {containerWidth ? (
               <span className="link-title"> Home</span>
             ) : (
@@ -63,7 +68,7 @@ const SideBar = () => {
           </Link>
         </div>
         <div className="link-item">
-          <Link className="sbLink" to="/Music">
+          <Link className={`sbLink ${ (active === 'Music') ? 'activeClass' : ''  }`} to="/Music">
             {containerWidth ? (
               <span className="link-title"> Music</span>
             ) : (
