@@ -1,0 +1,61 @@
+.topBar {
+  height: 4em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.topBarContent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 25vw;
+}
+.searchBox {
+  width: 10vw;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.187);
+ 
+  border: 1px solid lightgray;
+  text-align: center;
+  padding-inline: 10px;
+}
+
+.topBarBtns {
+  width: 10vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.upgradeBtn {
+  height: 3em;
+  width: 6em;
+  border: none;
+  margin-inline: 10px;
+  border-radius: 8px;
+  color: var(--secondary);
+  background-color: #7518a7;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px,
+    rgba(0, 0, 0, 0.05) 0px 5px 10px;
+}
+.music-content{
+  /* border: 1px solid rgb(212, 255, 0); */
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 90vh;
+}
+.center-content{
+  border: 1px solid red;
+  width: 70%;
+  
+}
+.right-content{
+  
+  border: 1px solid rgb(0, 166, 255);
+  /* width: 30%; */
+  align-self:flex-end
+}
+
