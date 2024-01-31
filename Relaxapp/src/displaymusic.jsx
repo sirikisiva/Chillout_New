@@ -80,7 +80,7 @@
 
 
 
-import React, {useRef, useState } from "react";
+import React, {useRef, useState, useEffect } from "react";
 import AppLogo from "./appLogo";
 import MusicCards from "./musicCards";
 import MusicPopup from "./musicPopup";
@@ -110,6 +110,13 @@ const DisplayMusic = () => {
       calmSongs: [
         { song: "calmMusic.mp3", id: "calmone" },
         { song: "calmMusic.mp3", id: "calmtwo" },
+        { song: "calmMusic.mp3", id: "calmthree" },
+        { song: "calmMusic.mp3", id: "calmFour" },
+        { song: "calmMusic.mp3", id: "calmthree" },
+        { song: "calmMusic.mp3", id: "calmthree" },
+        { song: "calmMusic.mp3", id: "calmthree" },
+        { song: "calmMusic.mp3", id: "calmthree" },
+        { song: "calmMusic.mp3", id: "calmthree" },
         { song: "calmMusic.mp3", id: "calmthree" },
       ],
     },
@@ -147,6 +154,18 @@ const DisplayMusic = () => {
       containerRef.current.scrollLeft += scrollAmount;
     }
   };
+
+  useEffect(() => {
+    const handleBodyScroll = () => {
+      document.body.style.overflow = modalOpen ? "hidden" : "auto";
+    };
+
+    handleBodyScroll();
+
+    return () => {
+      document.body.style.overflow = "auto"; 
+    };
+  }, [modalOpen]);
 
 
   return (
