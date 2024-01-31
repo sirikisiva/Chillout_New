@@ -80,10 +80,11 @@
 
 
 
-import React, { useState } from "react";
+import React, {useRef, useState } from "react";
 import AppLogo from "./appLogo";
 import MusicCards from "./musicCards";
 import MusicPopup from "./musicPopup";
+import './musicCards.css'
 import { calmMusicList, sleepMusicList } from "./musicData";
 
 const DisplayMusic = () => {
@@ -139,9 +140,25 @@ const DisplayMusic = () => {
     },
   ];
 
+  const containerRef = useRef(null);
+
+  const scrollBy = (scrollAmount) => {
+    if (containerRef.current) {
+      containerRef.current.scrollLeft += scrollAmount;
+    }
+  };
+
+
   return (
     <div>
       <div>
+        <AppLogo></AppLogo>
+      </div>
+      <div className='bees' title="Click to scroll for more features">
+        <div onClick={() => (scrollBy(-200))}><img className='leftBee' src="./move.png" alt="Left Bee" /></div>
+        <div onClick={() => (scrollBy(200))}><img className='rightBee' src="./move.png" alt="Right Bee" /></div>
+      </div>
+      <div ref={containerRef} className="featuresBox">
         <MusicCards musicCards={musicCards} onCardClick={handleCardClick} />
       </div>
       {modalOpen && selectedCard && (

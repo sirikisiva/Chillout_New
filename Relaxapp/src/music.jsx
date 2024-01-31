@@ -48,29 +48,24 @@ const Music = () => {
       style={{ width : `${sidebarWidth}vw`}}>
         <SideBar/>
       </div>
-      <div className='music-menu' style={{ width : `${featureBoxWidth}vw`}}>
-        <div className='topBar'>
-          <div  >LOGO</div>
+      <div className='music-menu' style={{ width : `${featureBoxWidth}vw`}}>   
+        <div className='center-content'>
+        <DisplayMusic></DisplayMusic>
+        </div>
+        <div className='right-content'>
+           <div className='topBar'>
           <div className='topBarContent'>
           <input type='search' className='searchBox' disabled placeholder='Search'></input>
           <div className='topBarBtns'>
-          <img src="./heart.png" alt='liked' style={{width:"1.5em",height:"1.5em"}}/>
-          <img src="./menu.png" alt='widget' style={{width:"1.5em",height:"1.5em"}}/>
+          {/* <img src="./heart.png" alt='liked' style={{width:"1.5em",height:"1.5em"}}/>
+          <img src="./menu.png" alt='widget' style={{width:"1.5em",height:"1.5em"}}/> */}
           <button className='upgradeBtn'>Upgrade</button>
           </div>
           </div>
          
         </div>
-        
-        <div className='music-content'>
-        <div className='center-content'>
-        {/* <DisplayMusic></DisplayMusic> */}
-        </div>
-        <div className='right-content'>
           <AudioList/>
         </div>
-       
-      </div>
       </div>
       
     </div>

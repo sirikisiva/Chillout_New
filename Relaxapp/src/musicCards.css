@@ -1,24 +1,25 @@
 .cards-container{
     display: flex;
-    flex-wrap: wrap;
-    padding-top: 1rem;
+    /* flex-wrap: wrap; */
+    /* padding-top: 1rem; */
     padding-bottom: 1rem;
-    justify-content: center;
+    /* justify-content: center; */
     cursor: pointer;
 }
 .card-box {
     margin: 15px;
     border-radius: 8px;
     /* background-color: #ffff; */
-    /* width: 300px; */
+    width: 300px;
     position: relative;
-    overflow: hidden;
+    /* overflow: hidden; */
     border: 8px;
     transition: filter 0.3s ease-in-out;
   }
  .img-card-div{
     display: flex;
     justify-content: center;
+    padding-left:1rem ;
  } 
  .img-width{
     width: 280px;
@@ -60,4 +61,25 @@
   top: 10px;
   right: 10px;
   cursor: pointer;
+}
+.bees{
+  display: flex;
+  justify-content: end;
+  margin-top: 2rem;
+  /* margin-bottom: -2.6rem; */
+}
+.leftBee{
+  width: 30px;
+  transform: scaleX(-1);
+  cursor: pointer;
+  margin: 5px;
+}
+.rightBee{
+  width: 30px;
+  cursor: pointer;
+  margin: 5px;
+}
+.featuresBox{
+  display: flex;
+  overflow-x: hidden;
 }
