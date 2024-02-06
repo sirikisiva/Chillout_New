@@ -75,16 +75,13 @@
 
 // export default DisplayMusic;
 
-
-
-
-
-
-import React, {useRef, useState, useEffect } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import AppLogo from "./appLogo";
 import MusicCards from "./musicCards";
 import MusicPopup from "./musicPopup";
-import './musicCards.css'
+import "./musicCards.css";
+import MusicList from "./musicList";
+import MusicTimer from "./musicTimer";
 import { calmMusicList, sleepMusicList } from "./musicData";
 
 const DisplayMusic = () => {
@@ -155,38 +152,32 @@ const DisplayMusic = () => {
     }
   };
 
-  useEffect(() => {
-    const handleBodyScroll = () => {
-      document.body.style.overflow = modalOpen ? "hidden" : "auto";
-    };
-
-    handleBodyScroll();
-
-    return () => {
-      document.body.style.overflow = "auto"; 
-    };
-  }, [modalOpen]);
-
-
   return (
     <div>
-      <div>
-        <AppLogo></AppLogo>
-      </div>
-      <div className='bees' title="Click to scroll for more features">
-        <div onClick={() => (scrollBy(-200))}><img className='leftBee' src="./move.png" alt="Left Bee" /></div>
-        <div onClick={() => (scrollBy(200))}><img className='rightBee' src="./move.png" alt="Right Bee" /></div>
+      <div className="d-flex">
+        <div className="col-10 cards-heading">
+          Dive into Relaxation with Our Collection of Soothing Music Cards
+        </div>
+        <div className="bees col-2" title="Click to scroll for more features">
+          <div onClick={() => scrollBy(-200)}>
+            <img className="leftBee" src="./move.png" alt="Left Bee" />
+          </div>
+          <div onClick={() => scrollBy(200)}>
+            <img className="rightBee" src="./move.png" alt="Right Bee" />
+          </div>
+        </div>
       </div>
       <div ref={containerRef} className="featuresBox">
         <MusicCards musicCards={musicCards} onCardClick={handleCardClick} />
       </div>
-      {modalOpen && selectedCard && (
-        <MusicPopup
-          modelTitle={selectedCard.name}
-          calmSongs={selectedCard.calmSongs || []}
-          onClose={handleCloseModal}
-        />
-      )}
+      <div className="d-flex">
+      <div className="col-8 selected-card-list">
+      {selectedCard && <MusicList list={selectedCard.calmSongs || []} heading={selectedCard.name} />}
+      </div>
+      <div className="col-4">
+       <MusicTimer></MusicTimer>
+      </div>
+   </div>
     </div>
   );
 };

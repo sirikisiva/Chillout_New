@@ -11,14 +11,13 @@ import { IoBookOutline } from "react-icons/io5";
 import { RiSpeakLine } from "react-icons/ri";
 import { GiMeditation } from "react-icons/gi";
 import { RiHome3Line } from "react-icons/ri";
-import  LogOutPopup from './logOutPopup';
+import LogOutPopup from "./logOutPopup";
 
 const SideBar = () => {
   const [containerWidth, setContainerWidth] = useState(false);
   const [profileText, setProfileText] = useState(false);
   const [isPopupOpen, setPopupOpen] = useState(false);
-  const [active, setActive] = useState('');
-
+  const [active, setActive] = useState("");
 
   const handleContainerHover = () => {
     setContainerWidth(true);
@@ -30,9 +29,9 @@ const SideBar = () => {
     setProfileText(false);
   };
 
-  const activeLink = (link) =>{
-     setActive(link);
-  }
+  const activeLink = (link) => {
+    setActive(link);
+  };
 
   const openPopup = () => {
     setPopupOpen(true);
@@ -41,7 +40,6 @@ const SideBar = () => {
   const closePopup = () => {
     setPopupOpen(false);
   };
-
 
   return (
     <div
@@ -52,25 +50,38 @@ const SideBar = () => {
     >
       <div className="profile">
         <IoPersonCircleOutline size="2em" />
-        <div className={`profileName ${profileText ? 'visible' : 'hidden'}`}>
+        <div className={`profileName ${profileText ? "visible" : "hidden"}`}>
           <span>Profile</span>
           <h6>Username</h6>
         </div>
       </div>
       <div className="link-item-container">
-      <div className="link-item">
-          <Link className={`sbLink ${ (active === 'Features') ? 'activeClass' : ''  }` } to="/Features">
+        <div className="link-item">
+          <Link
+            className={`sbLink ${active === "Features" ? "activeClass" : ""}`}
+            to="/Features"
+          >
             {containerWidth ? (
-              <span className="link-title"> Home</span>
+              <div className="feature-list">
+                 <div className="col-2"> <RiHome3Line size="1.5em" /></div>
+                 <div className="col-10"><span className="link-title"> Home</span></div> 
+              </div>
             ) : (
               <RiHome3Line size="1.5em" />
             )}
           </Link>
         </div>
         <div className="link-item">
-          <Link className={`sbLink ${ (active === 'Music') ? 'activeClass' : ''  }`} to="/Music">
+          <Link
+            className={`sbLink ${active === "Music" ? "activeClass" : ""}`}
+            to="/Music"
+          >
             {containerWidth ? (
-              <span className="link-title"> Music</span>
+              <div className="feature-list">
+                {" "}
+                <CiMusicNote1 size="1.5em" />
+                <span className="link-title"> Music</span>
+              </div>
             ) : (
               <CiMusicNote1 size="1.5em" />
             )}
@@ -79,7 +90,11 @@ const SideBar = () => {
         <div className="link-item">
           <Link className="sbLink" to="/Meditation">
             {containerWidth ? (
-              <span className="link-title">Meditation</span>
+              <div className="feature-list">
+                <GiMeditation size="1.5em" />
+
+                <span className="link-title">Meditation</span>
+              </div>
             ) : (
               <GiMeditation size="1.5em" />
             )}
@@ -88,7 +103,11 @@ const SideBar = () => {
         <div className="link-item">
           <Link className="sbLink" to="/Motivation">
             {containerWidth ? (
-              <span className="link-title">Motivation</span>
+              <div className="feature-list">
+                {" "}
+                <RiSpeakLine size="1.5em" />
+                <span className="link-title">Motivation</span>
+              </div>
             ) : (
               <RiSpeakLine size="1.5em" />
             )}
@@ -97,7 +116,11 @@ const SideBar = () => {
         <div className="link-item">
           <Link className="sbLink" to="/Friend">
             {containerWidth ? (
-              <span className="link-title">Friends</span>
+              <div className="feature-list">
+                {" "}
+                <LiaUserFriendsSolid size="1.5em" />{" "}
+                <span className="link-title">Friends</span>
+              </div>
             ) : (
               <LiaUserFriendsSolid size="1.5em" />
             )}
@@ -106,17 +129,25 @@ const SideBar = () => {
         <div className="link-item">
           <Link className="sbLink" to="/Books">
             {containerWidth ? (
-              <span className="link-title">Books</span>
+              <div className="feature-list">
+                {" "}
+                <IoBookOutline size="1.5em" />
+                <span className="link-title">Books</span>
+              </div>
             ) : (
               // <PiBooks size="1.5em" />
-              <IoBookOutline  size="1.5em"/>
+              <IoBookOutline size="1.5em" />
             )}
           </Link>
         </div>
         <div className="link-item">
           <Link className="sbLink" to="/Reels">
             {containerWidth ? (
-              <span className="link-title">Reels</span>
+              <div className="feature-list">
+                {" "}
+                <GoPlay size="1.5em" />
+                <span className="link-title">Reels</span>
+              </div>
             ) : (
               <GoPlay size="1.5em" />
             )}
@@ -130,11 +161,13 @@ const SideBar = () => {
         </div>
         <div className="profile">
           <CiLogout size="1.5em" />{" "}
-          {containerWidth && <span className="link-title" onClick={openPopup}>Logout</span>}
+          {containerWidth && (
+            <span className="link-title" onClick={openPopup}>
+              Logout
+            </span>
+          )}
         </div>
       </div>
-
-      {/* <div>{isPopupOpen && <LogOutPopup onClose={closePopup} />}</div> */}
     </div>
   );
 };

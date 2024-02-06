@@ -9,8 +9,8 @@
 .card-box {
     margin: 15px;
     border-radius: 8px;
-    /* background-color: #ffff; */
-    width: 300px;
+    background-color: #ffff;
+    width: 280px;
     position: relative;
     /* overflow: hidden; */
     border: 8px;
@@ -19,21 +19,20 @@
  .img-card-div{
     display: flex;
     justify-content: center;
-    padding-left:1rem ;
+    padding: 1rem;
  } 
  .img-width{
-    width: 280px;
-    height: 280px;
+    width: 240px;
+    height: 240px;
     border-radius: 20px;
     object-fit: cover;
  }
  .music-name{
-   position: relative;
-   top: 280px;
    display: flex;
    justify-content: center;
-   font-size: 24px;
-   color: white;
+   font-size: 20px;
+   margin-bottom: 0.5rem;
+   color: purple;
  }
  .modal {
   position: fixed;
@@ -70,8 +69,6 @@
 .bees{
   display: flex;
   justify-content: end;
-  margin-top: 2rem;
-  /* margin-bottom: -2.6rem; */
 }
 .leftBee{
   width: 30px;
@@ -118,4 +115,34 @@ label {
 select{
   margin-left: 1rem;
   border-radius: 5px;
+}
+.cards-heading{
+  padding-left: 1rem;
+  font-size: 22px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+.selected-card-list{
+  height: 400px; 
+  /* margin: 1rem;  */
+   border: 1px solid blue;
+   overflow-y: scroll;
+}
+.audio-player{
+  width: 100%;
+  height: 80px;
+  padding: 1rem;
+}
+.music-list{
+  /* height: 400px; */
+  /* margin: 1rem; */
+  /* border: 1px solid blue; */
+}
+.music-timer{
+  height: 400px;
+  border: 1px solid blue;
+}
+.music-list-heading{
+  font-size: 20px;
 }

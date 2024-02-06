@@ -1,0 +1,24 @@
+.books-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    justify-content: center;
+    cursor: pointer;
+  }
+  .book-card {
+    margin: 20px;
+    border-radius: 8px;
+    background-color: #ffff;
+    width: 300px;
+    position: relative;
+    overflow: hidden;
+    border: 8px solid #fff;
+    transition: filter 0.3s ease-in-out;
+  }
+  .book-img{
+    width: 281px;
+    height: 301px;
+    border-radius: 10px ;
+    object-fit: cover;
+  }
