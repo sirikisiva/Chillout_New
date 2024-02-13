@@ -13,7 +13,7 @@ export const Songs = [
     favourite: false,
     songName: "Bella Ciao",
     artist: "El Profesor",
-    song: "",
+    song: "./La-Casa-De-Papel---Bella-Ciao-(Money-Heist).mp3",
     imgSrc:
       "",
   },
@@ -22,7 +22,7 @@ export const Songs = [
     favourite: false,
     songName: "Beast",
     artist: "Anirudh Ravichander",
-    song: "",
+    song: "./Beast.mp3",
     imgSrc:
       "",
   },
@@ -100,3 +100,96 @@ export const Songs = [
 ];
 
 
+export const musicCardsData = [
+  {
+    id: "one",
+    img: "musicOne.jpg",
+    name: "Calm Music",
+    mapId: 1,
+    calmSongs: [
+      {
+        id: 1,
+        favourite: false,
+        songName: "Bella Ciao",
+        artist: "El Profesor",
+        song: "La-Casa-De-Papel---Bella-Ciao-(Money-Heist).mp3",
+        imgSrc:
+          "",
+      },
+      {
+        id: 2,
+        favourite: false,
+        songName: "Beast",
+        artist: "Anirudh Ravichander",
+        song: "./Beast.mp3",
+        imgSrc:
+          "",
+      },
+    ],
+  },
+  {
+    id: "two",
+    img: "musicTwo.jpg",
+    name: "Stress Relief Music",
+    calmSongs: [
+      {
+        id: 1,
+        favourite: false,
+        songName: "Bella Ciao",
+        artist: "El Profesor",
+        song: "",
+        imgSrc:
+          "",
+      },
+      {
+        id: 2,
+        favourite: false,
+        songName: "Beast",
+        artist: "Anirudh Ravichander",
+        song: "",
+        imgSrc:
+          "",
+      },
+    ],
+  },
+  {
+    id: "three",
+    img: "musicThree.jpg",
+    name: "Sleep Music",
+    calmSongs: [
+      {
+        id: 1,
+        favourite: false,
+        songName: "Bella Ciao",
+        artist: "El Profesor",
+        song: "",
+        imgSrc:
+          "",
+      },
+      {
+        id: 2,
+        favourite: false,
+        songName: "Beast",
+        artist: "Anirudh Ravichander",
+        song: "",
+        imgSrc:
+          "",
+      },
+    ],
+  },
+  {
+    id: "four",
+    img: "musicFour.jpg",
+    name: "Depression Relief Music",
+  },
+  {
+    id: "five",
+    img: "musicFive.jpg",
+    name: "Anxiety Relief Music",
+  },
+  {
+    id: "six",
+    img: "musicSix.jpeg",
+    name: "Anger Relief Music",
+  },
+];

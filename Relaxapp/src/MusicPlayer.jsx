@@ -33,7 +33,7 @@ function MusicPlayer({ song, imgSrc, auto }) {
   }, [audioPlayer?.current?.loadedmetada, audioPlayer?.current?.readyState]);
 
   const changePlayPause = () => {
-    const prevValue = isPlaying;
+    const prevValue = isPlaying&&song;
     setPlay(!prevValue);
 
     if (!prevValue) {

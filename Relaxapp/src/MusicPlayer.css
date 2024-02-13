@@ -1,6 +1,8 @@
 .musicPlayer {
-    width: 100%;
+    width: 80%;
     padding: 10px;
+    position:absolute;
+    z-index: 100;
     display: flex;
   }
   
