@@ -134,10 +134,10 @@ select{
   height: 80px;
   padding: 1rem;
 }
-.music-list{
-  /* height: 400px; */
-  /* margin: 1rem; */
-  /* border: 1px solid blue; */
+.music-list:hover{
+  border: 1px solid blueviolet;
+  cursor: pointer;
+ 
 }
 .music-timer{
   height: 400px;
@@ -146,3 +146,29 @@ select{
 .music-list-heading{
   font-size: 20px;
 }
+.music-heading{
+  display: flex;
+  justify-content: center;
+  font-size: 24px;
+    padding: 1rem;
+  color: purple;
+}
+.img-border{
+  border-radius: 12px;
+}
+.no-songs{
+  font-size: 24px;
+  margin-top: 4rem;
+}
+.track{
+  font-size: 22px;
+  padding: 0.8rem;
+}
+.artist-name-heading{
+  font-size: 22px;
+  padding: 0.8rem;
+}
+.no-card-selected-message{display: flex;
+  justify-content: center;
+  margin: 1rem;
+  font-size: 25px;}

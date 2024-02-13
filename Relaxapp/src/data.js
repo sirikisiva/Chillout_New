@@ -7,97 +7,97 @@ export const data = [
 ];
 
 
-export const Songs = [
-  {
-    id: 1,
-    favourite: false,
-    songName: "Bella Ciao",
-    artist: "El Profesor",
-    song: "./La-Casa-De-Papel---Bella-Ciao-(Money-Heist).mp3",
-    imgSrc:
-      "",
-  },
-  {
-    id: 2,
-    favourite: false,
-    songName: "Beast",
-    artist: "Anirudh Ravichander",
-    song: "./Beast.mp3",
-    imgSrc:
-      "",
-  },
-  {
-    id: 3,
-    favourite: false,
-    songName: "Joker - Rock and Roll",
-    artist: "Hildur Guðnadóttir",
-    song: "",
-    imgSrc:
-      "",
-  },
-  {
-    id: 4,
-    favourite: false,
-    songName: "I Am A Peaky Blinder",
-    artist: "Otnicka",
-    song: "",
-    imgSrc:
-      "",
-  },
-  {
-    id: 5,
-    favourite: false,
-    songName: "Naanga Vera Maari",
-    artist: "Yuvan Shankar Raja",
-    song: "",
-    imgSrc:
-      "",
-  },
-  {
-    id: 6,
-    songName: "Your Woman",
-    artist: "White Town",
-    song: "",
-    imgSrc:
-      "",
-  },
-  {
-    id: 7,
-    favourite: false,
-    songName: "Charlie",
-    artist: "Gopi Sundar",
-    song: "",
-    imgSrc:
-      "",
-  },
-  {
-    id: 8,
-    favourite: false,
-    songName: "Mask Off",
-    artist: "Future",
-    song: "",
-    imgSrc:
-      "",
-  },
-  {
-    id: 9,
-    favourite: false,
-    songName: "Hey Mama",
-    artist: "David Guetta",
-    song: "",
-    imgSrc:
-      "",
-  },
-  {
-    id: 10,
-    favourite: false,
-    songName: "Turkish Folk Battle Song",
-    artist: "CVR Toon ",
-    song: "",
-    imgSrc:
-      "",
-  },
-];
+// export const Songs = [
+//   {
+//     id: 1,
+//     favourite: false,
+//     songName: "Bella Ciao",
+//     artist: "El Profesor",
+//     song: "./La-Casa-De-Papel---Bella-Ciao-(Money-Heist).mp3",
+//     imgSrc:
+//       "",
+//   },
+//   {
+//     id: 2,
+//     favourite: false,
+//     songName: "Beast",
+//     artist: "Anirudh Ravichander",
+//     song: "./Beast.mp3",
+//     imgSrc:
+//       "",
+//   },
+//   {
+//     id: 3,
+//     favourite: false,
+//     songName: "Joker - Rock and Roll",
+//     artist: "Hildur Guðnadóttir",
+//     song: "",
+//     imgSrc:
+//       "",
+//   },
+//   {
+//     id: 4,
+//     favourite: false,
+//     songName: "I Am A Peaky Blinder",
+//     artist: "Otnicka",
+//     song: "",
+//     imgSrc:
+//       "",
+//   },
+//   {
+//     id: 5,
+//     favourite: false,
+//     songName: "Naanga Vera Maari",
+//     artist: "Yuvan Shankar Raja",
+//     song: "",
+//     imgSrc:
+//       "",
+//   },
+//   {
+//     id: 6,
+//     songName: "Your Woman",
+//     artist: "White Town",
+//     song: "",
+//     imgSrc:
+//       "",
+//   },
+//   {
+//     id: 7,
+//     favourite: false,
+//     songName: "Charlie",
+//     artist: "Gopi Sundar",
+//     song: "",
+//     imgSrc:
+//       "",
+//   },
+//   {
+//     id: 8,
+//     favourite: false,
+//     songName: "Mask Off",
+//     artist: "Future",
+//     song: "",
+//     imgSrc:
+//       "",
+//   },
+//   {
+//     id: 9,
+//     favourite: false,
+//     songName: "Hey Mama",
+//     artist: "David Guetta",
+//     song: "",
+//     imgSrc:
+//       "",
+//   },
+//   {
+//     id: 10,
+//     favourite: false,
+//     songName: "Turkish Folk Battle Song",
+//     artist: "CVR Toon ",
+//     song: "",
+//     imgSrc:
+//       "",
+//   },
+// ];
 
 
 export const musicCardsData = [
@@ -113,8 +113,7 @@ export const musicCardsData = [
         songName: "Bella Ciao",
         artist: "El Profesor",
         song: "La-Casa-De-Papel---Bella-Ciao-(Money-Heist).mp3",
-        imgSrc:
-          "",
+        imgSrc:"musicListOne.jpg",
       },
       {
         id: 2,
@@ -122,8 +121,35 @@ export const musicCardsData = [
         songName: "Beast",
         artist: "Anirudh Ravichander",
         song: "./Beast.mp3",
-        imgSrc:
-          "",
+        imgSrc:"musicListOne.jpg",
+
+      },
+      {
+        id: 3,
+        favourite: false,
+        songName: "Beast",
+        artist: "Anirudh Ravichander",
+        song: "./Beast.mp3",
+        imgSrc:"musicListOne.jpg",
+
+      },
+      {
+        id: 4,
+        favourite: false,
+        songName: "Beast",
+        artist: "Anirudh Ravichander",
+        song: "./Beast.mp3",
+        imgSrc:"musicListOne.jpg",
+
+      },
+      {
+        id: 5,
+        favourite: false,
+        songName: "Beast",
+        artist: "Anirudh Ravichander",
+        song: "./Beast.mp3",
+        imgSrc:"musicListOne.jpg",
+
       },
     ],
   },
@@ -135,20 +161,47 @@ export const musicCardsData = [
       {
         id: 1,
         favourite: false,
-        songName: "Bella Ciao",
-        artist: "El Profesor",
-        song: "",
-        imgSrc:
-          "",
+        songName: "Beast",
+        artist: "Anirudh Ravichander",
+        song: "./Beast.mp3",
+        imgSrc:"musicListOne.jpg",
+
       },
       {
         id: 2,
         favourite: false,
         songName: "Beast",
         artist: "Anirudh Ravichander",
-        song: "",
-        imgSrc:
-          "",
+        song: "./Beast.mp3",
+        imgSrc:"musicListOne.jpg",
+
+      },
+      {
+        id: 3,
+        favourite: false,
+        songName: "Beast",
+        artist: "Anirudh Ravichander",
+        song: "./Beast.mp3",
+        imgSrc:"musicListOne.jpg",
+
+      },
+      {
+        id: 4,
+        favourite: false,
+        songName: "Beast",
+        artist: "Anirudh Ravichander",
+        song: "./Beast.mp3",
+        imgSrc:"musicListOne.jpg",
+
+      },
+      {
+        id: 5,
+        favourite: false,
+        songName: "Beast",
+        artist: "Anirudh Ravichander",
+        song: "./Beast.mp3",
+        imgSrc:"musicListOne.jpg",
+
       },
     ],
   },
@@ -160,20 +213,20 @@ export const musicCardsData = [
       {
         id: 1,
         favourite: false,
-        songName: "Bella Ciao",
-        artist: "El Profesor",
-        song: "",
-        imgSrc:
-          "",
+        songName: "Beast",
+        artist: "Anirudh Ravichander",
+        song: "./Beast.mp3",
+        imgSrc:"musicListOne.jpg",
+
       },
       {
         id: 2,
         favourite: false,
         songName: "Beast",
         artist: "Anirudh Ravichander",
-        song: "",
-        imgSrc:
-          "",
+        song: "./Beast.mp3",
+        imgSrc:"musicListOne.jpg",
+
       },
     ],
   },

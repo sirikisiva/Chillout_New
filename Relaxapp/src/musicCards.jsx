@@ -3,7 +3,7 @@ import './musicCards.css';
 import MusicList from './musicList';
 import MusicTimer from './musicTimer';
 
-const MusicCards = ({ musicCards, onCardClick }) => {
+const MusicCards = ({ musicCards, onCardClick, selectedCard }) => {
   return (
    <div>
       <div className='cards-container'>
@@ -14,6 +14,10 @@ const MusicCards = ({ musicCards, onCardClick }) => {
         </div>
       ))}
     </div>
+
+    {selectedCard === null && (
+        <div className='no-card-selected-message'>Please select a card</div>
+      )}
    </div>
   );
 };
