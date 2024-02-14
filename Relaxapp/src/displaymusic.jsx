@@ -22,12 +22,12 @@ const DisplayMusic = ({ musicCardsData, onSongSelect }) => {
         <MusicCards selectedCard={selectedCard} musicCards={musicCardsData} onCardClick={handleCardClick} />
       </div>
       <div className="d-flex">
-        <div className="col-8 selected-card-list">
+        <div className={`col-8 ${selectedCard ? 'selected-card-list' : ''}`}>
           {selectedCard && (
             <MusicList list={selectedCard.calmSongs || []} heading={selectedCard.name} onSongSelect={onSongSelect} />
           )}
         </div>
-        <div className="col-4">
+        <div className={`col-4 ${selectedCard ? 'music-timer' : ''}`}>
           <MusicTimer />
         </div>
       </div>

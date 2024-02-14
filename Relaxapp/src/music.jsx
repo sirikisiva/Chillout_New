@@ -65,7 +65,8 @@ const Music = () => {
   };
 
   return (
-    <div className="d-flex">
+   <div>
+      <div className="d-flex">
       <div
         className="side-menu"
         onMouseEnter={handleMouseEnter}
@@ -102,7 +103,13 @@ const Music = () => {
             alignSelf:"center"
           }}
         >
-          {selectedSong && (  <MusicPlayer
+       
+        </div>
+      </div>
+    
+    </div>
+    <div>
+      {selectedSong && (  <MusicPlayer
             changeFavourite={changeFavourite}
             setMainSong={setMainSong}
             togglePlay={togglePlay}
@@ -111,9 +118,8 @@ const Music = () => {
             autoplay={true}
             />
             )}
-        </div>
       </div>
-    </div>
+   </div>
   );
 };
 

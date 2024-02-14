@@ -6,6 +6,18 @@ body {
   background: rgb(187,184,226);
   background: linear-gradient(90deg, rgba(187,184,226,1) 0%, rgba(189,138,245,1) 49%, rgba(187,184,226,1) 100%);
 }
+body::-webkit-scrollbar {
+  width: 5px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #a0a0a0;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #f0f0f0;
+}
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
