@@ -12,11 +12,12 @@ const MusicList = ({ list, heading, onSongSelect }) => {
   }
   return (
     <div>
-      <div>{heading && 
+      <div className="music-heading-fixed">{heading && 
       <div className="music-heading">{heading}</div>     
       }
       </div>
-      <div className="d-flex">
+     <div>
+     <div className="d-flex">
               <div className="col-3 track"># TRACK</div>
               <div className="col-3"></div>
               <div className="col-3 artist-name-heading">ARTISTS</div>
@@ -31,16 +32,17 @@ const MusicList = ({ list, heading, onSongSelect }) => {
         >
           <div className="d-flex">
             <div className="col-3 p-2 d-flex align-items-center">
-                <div className="p-2 font-14"> {song.id}</div>
-                <div>  <img src={song.imgSrc} width={100} className="img-border"></img></div>
+                <div className="p-2 font-color"> {song.id}</div>
+                <div>  <img src={song.imgSrc} className="img-border"></img></div>
 
               </div>  
-               <div className="col-3 p-2 d-flex align-items-center font-14">{song.songName}</div>  
-            <div className="col-3 p-2 d-flex align-items-center font-14">{song.artist}</div>
-            <div className="col-3 p-2 d-flex align-items-center font-14">{song.duration}</div>
+               <div className="col-3 p-2 d-flex align-items-center font-color">{song.songName}</div>  
+            <div className="col-3 p-2 d-flex align-items-center font-color">{song.artist}</div>
+            <div className="col-3 p-2 d-flex align-items-center font-color">{song.duration}</div>
           </div>
         </div>
       ))}
+     </div>
     </div>
   );
 };

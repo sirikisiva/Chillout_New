@@ -65,8 +65,7 @@ const Music = () => {
   };
 
   return (
-   <div>
-      <div className="d-flex">
+    <div className="d-flex music-feature-container">
       <div
         className="side-menu"
         onMouseEnter={handleMouseEnter}
@@ -79,47 +78,38 @@ const Music = () => {
         <div>
           <AppLogo />
         </div>
-        <div className="d-flex mb-4">
-          <div className="col-8 mt-4">
+        <div className="d-flex mb-4 justify-content-center">
+          <div className="mt-4 search-width">
             <input
               placeholder="Search Here!"
               type="search"
               className="search-bar"
             ></input>
           </div>
-          <div className="col-4 mt-4 d-flex justify-content-end">
+          {/* <div className="col-4 mt-4 d-flex justify-content-end">
             <div className="d-flex  align-items-center">
               <img src="likes.png" className="like-img" alt="likes"></img>
             </div>
             <div className="likes">My Likes</div>
-          </div>
+          </div> */}
         </div>
         <DisplayMusic musicCardsData={musicCardsData} onSongSelect={setSelectedSong} />
-        <div
-          style={{
-            borderWidth: 10,
-            borderColor: "red",
-            width: "80%%",
-            alignSelf:"center"
-          }}
-        >
-       
+        <div className="d-flex" style={{ width: "100%" }}>
+          {selectedSong &&  <div style={{ width: "100%" }}> 
+              <MusicPlayer
+                changeFavourite={changeFavourite}
+                setMainSong={setMainSong}
+                togglePlay={togglePlay}
+                song={selectedSong.song}
+                imgSrc={selectedSong.imgSrc}
+                name={selectedSong.songName}
+                autoplay={true}
+              />
+            </div>}
+         
         </div>
       </div>
-    
     </div>
-    <div>
-      {selectedSong && (  <MusicPlayer
-            changeFavourite={changeFavourite}
-            setMainSong={setMainSong}
-            togglePlay={togglePlay}
-            song={selectedSong.song}
-            imgSrc={selectedSong.imgSrc}
-            autoplay={true}
-            />
-            )}
-      </div>
-   </div>
   );
 };
 

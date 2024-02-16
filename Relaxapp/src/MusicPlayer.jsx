@@ -13,7 +13,7 @@ import {
 } from "react-icons/fa";
 import { BsDownload } from "react-icons/bs";
 
-function MusicPlayer({ song, imgSrc, auto }) {
+function MusicPlayer({ song, imgSrc, auto, name }) {
   const [isLove, setLove] = useState(false);
   const [isPlaying, setPlay] = useState(false);
   //   duration state
@@ -87,11 +87,12 @@ function MusicPlayer({ song, imgSrc, auto }) {
   };
 
   return (
-    <div className="musicPlayer">
-      <div className="songImage">
-        <img src={imgSrc} alt="" />
+    <div className="d-flex musicPlayer">
+      <div className="col-2 d-flex songImage">
+        <div> <img src={imgSrc} alt="" /></div>
+        <div className= "d-flex justify-content-center align-items-center song-name">{name}</div> 
       </div>
-      <div className="songAttributes">
+      <div className="col-10 songAttributes">
         <audio src={song} preload="metadata" ref={audioPlayer} />
 
         <div className="top">

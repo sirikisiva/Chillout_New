@@ -28,7 +28,7 @@ const MusicCards = ({ musicCards, onCardClick, selectedCard }) => {
       {selectedCard === null && (
         <div>
            {/* <div className="d-flex justify-content-center animate-image"><img className="select-card-img" src="./selectCard.png"></img></div> */}
-          <div className="no-card-selected-message">click on the card to make your mind chill</div>
+          <div className="no-card-selected-message animate-fade-in">click on the card to make your mind chill</div>
         </div>
       )}
     </div>

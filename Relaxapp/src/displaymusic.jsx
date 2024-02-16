@@ -21,15 +21,15 @@ const DisplayMusic = ({ musicCardsData, onSongSelect }) => {
       <div className="featuresBox">
         <MusicCards selectedCard={selectedCard} musicCards={musicCardsData} onCardClick={handleCardClick} />
       </div>
-      <div className="d-flex">
-        <div className={`col-8 ${selectedCard ? 'selected-card-list' : ''}`}>
+      <div className="d-flex m-4">
+        <div className={`col-12 ${selectedCard ? 'selected-card-list' : ''}`}>
           {selectedCard && (
             <MusicList list={selectedCard.calmSongs || []} heading={selectedCard.name} onSongSelect={onSongSelect} />
           )}
         </div>
-        <div className={`col-4 ${selectedCard ? 'music-timer' : ''}`}>
+        {/* <div className={`col-4 ${selectedCard ? 'music-timer' : ''}`}>
           <MusicTimer />
-        </div>
+        </div> */}
       </div>
     </div>
   );
