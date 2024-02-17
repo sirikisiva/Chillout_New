@@ -63,8 +63,8 @@ const SideBar = () => {
           >
             {containerWidth ? (
               <div className="feature-list">
-                 <div className="col-2"> <RiHome3Line size="1.5em" /></div>
-                 <div className="col-10"><span className="link-title"> Home</span></div> 
+                 <RiHome3Line size="1.5em" />
+                <span className="link-title"> Home</span>
               </div>
             ) : (
               <RiHome3Line size="1.5em" />

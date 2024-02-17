@@ -10,7 +10,10 @@ const DisplayMusic = ({ musicCardsData, onSongSelect }) => {
   const handleCardClick = (card) => {
     setSelectedCard(card);
   };
-
+  const handleSongSelect = (song) => {
+    // Pass the selected song to the parent component
+    onSongSelect(song);
+  };
   return (
     <div>
       <div className="d-flex">
@@ -24,7 +27,7 @@ const DisplayMusic = ({ musicCardsData, onSongSelect }) => {
       <div className="d-flex m-4">
         <div className={`col-12 ${selectedCard ? 'selected-card-list' : ''}`}>
           {selectedCard && (
-            <MusicList list={selectedCard.calmSongs || []} heading={selectedCard.name} onSongSelect={onSongSelect} />
+            <MusicList list={selectedCard.calmSongs || []} heading={selectedCard.name} onSongSelect={handleSongSelect} />
           )}
         </div>
         {/* <div className={`col-4 ${selectedCard ? 'music-timer' : ''}`}>

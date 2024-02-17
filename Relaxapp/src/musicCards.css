@@ -1,12 +1,10 @@
 .cards-container {
   display: flex;
-  /* flex-wrap: wrap; */
-  /* padding-top: 1rem; */
   padding-bottom: 1rem;
-  /* justify-content: center; */
   cursor: pointer;
   animation: scrollAnimation 25s linear infinite;
 }
+
 
 .card-box:hover {
   transform: translateX(0);
@@ -16,9 +14,11 @@
 .stop-movement {
   animation-play-state: paused;
 }
-
 @keyframes scrollAnimation {
-  to {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
     transform: translateX(-100%);
   }
 }
@@ -26,7 +26,6 @@
 .card-box {
   margin: 15px;
   border-radius: 8px;
-  background-color: #ffff;
   width: 280px;
   position: relative;
   /* overflow: hidden; */
@@ -133,9 +132,9 @@ select {
 }
 .music-list:hover {
   border: 1px solid #632b6c;
+  background-color: #632b6c68;
   border-radius: 10px;
   cursor: pointer;
-  margin: 1rem;
 }
 .music-timer {
   height: 280px;
@@ -156,7 +155,7 @@ select {
 }
 .img-border {
   border-radius: 12px;
-  width: 72px;
+  width: 50px;
 }
 .no-songs {
   font-size: 24px;

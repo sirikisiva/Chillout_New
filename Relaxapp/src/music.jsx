@@ -103,7 +103,7 @@ const Music = () => {
                 song={selectedSong.song}
                 imgSrc={selectedSong.imgSrc}
                 name={selectedSong.songName}
-                autoplay={true}
+               
               />
             </div>}
          
