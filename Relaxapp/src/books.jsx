@@ -39,16 +39,6 @@ const Books = () => {
           </div>
         </div>
 
-        <div className="d-flex mb-4 justify-content-center">
-          <div className="mt-4 search-width">
-            <input
-              placeholder="Search here for more books!"
-              type="search"
-              className="search-bar"
-            ></input>
-          </div>
-        </div>
-
         <DisplayBooks></DisplayBooks>
       </div>
     </div>
