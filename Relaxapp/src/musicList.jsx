@@ -1,7 +1,17 @@
-import React from "react";
+import React, {useState} from "react";
 import "./musicCards.css";
 
-const MusicList = ({ list, heading, onSongSelect }) => {
+const MusicList = ({ list, heading, onSongSelect, imgList, onPlayAll }) => {
+  const [isPlayingAll, setIsPlayingAll] = useState(false);
+
+  const handlePlayAll = () => {
+    if (onPlayAll && typeof onPlayAll === "function") {
+      setIsPlayingAll(true);
+      onPlayAll(list);
+    }
+  };
+
+  
   if (!list || !Array.isArray(list) || list.length === 0) {
     return (
       <div>
@@ -11,7 +21,12 @@ const MusicList = ({ list, heading, onSongSelect }) => {
     );
   }
   return (
-    <div>
+    <div className="d-flex">
+      <div className="col-4">
+       <div className="d-flex justify-content-center"><img className="selected-img" src={imgList}></img></div>
+       <div className="d-flex justify-content-center p-4"> <div className="play-all" onClick={handlePlayAll}>Play All</div></div>
+      </div>
+      <div className="col-8 selected-card-list">
       <div className="music-heading-fixed">{heading && 
       <div className="music-heading">{heading}</div>     
       }
@@ -43,6 +58,7 @@ const MusicList = ({ list, heading, onSongSelect }) => {
         </div>
       ))}
      </div>
+      </div>
     </div>
   );
 };

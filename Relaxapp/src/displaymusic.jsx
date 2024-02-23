@@ -6,6 +6,7 @@ import MusicTimer from "./musicTimer";
 
 const DisplayMusic = ({ musicCardsData, onSongSelect }) => {
   const [selectedCard, setSelectedCard] = useState(null);
+  const [isPlayingAll, setIsPlayingAll] = useState(false);
 
   const handleCardClick = (card) => {
     setSelectedCard(card);
@@ -14,6 +15,21 @@ const DisplayMusic = ({ musicCardsData, onSongSelect }) => {
     // Pass the selected song to the parent component
     onSongSelect(song);
   };
+
+  const handlePlayAll = (songList) => {
+    setIsPlayingAll(true);
+    songList.forEach((song, index) => {
+      setTimeout(() => {
+        handleSongSelect(song);
+        if (index === songList.length - 1) {
+
+          setIsPlayingAll(false);
+        }
+      }, index * 1000); 
+    });
+  };
+
+
   return (
     <div>
       <div className="d-flex">
@@ -25,9 +41,9 @@ const DisplayMusic = ({ musicCardsData, onSongSelect }) => {
         <MusicCards selectedCard={selectedCard} musicCards={musicCardsData} onCardClick={handleCardClick} />
       </div>
       <div className="d-flex m-4">
-        <div className={`col-12 ${selectedCard ? 'selected-card-list' : ''}`}>
+        <div className='col-12'>
           {selectedCard && (
-            <MusicList list={selectedCard.calmSongs || []} heading={selectedCard.name} onSongSelect={handleSongSelect} />
+            <MusicList imgList = {selectedCard.img} list={selectedCard.calmSongs || []} heading={selectedCard.name} onSongSelect={handleSongSelect}   onPlayAll={handlePlayAll}/>
           )}
         </div>
         {/* <div className={`col-4 ${selectedCard ? 'music-timer' : ''}`}>

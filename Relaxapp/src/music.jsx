@@ -76,7 +76,7 @@ const Music = () => {
       </div>
       <div className="music-menu" style={{ width: `${featureBoxWidth}vw` }}>
         <div>
-          <AppLogo />
+          {/* <AppLogo /> */}
         </div>
         <div className="d-flex mb-4 justify-content-center">
           <div className="mt-4 search-width">
@@ -86,12 +86,6 @@ const Music = () => {
               className="search-bar"
             ></input>
           </div>
-          {/* <div className="col-4 mt-4 d-flex justify-content-end">
-            <div className="d-flex  align-items-center">
-              <img src="likes.png" className="like-img" alt="likes"></img>
-            </div>
-            <div className="likes">My Likes</div>
-          </div> */}
         </div>
         <DisplayMusic musicCardsData={musicCardsData} onSongSelect={setSelectedSong} />
         <div className="d-flex" style={{ width: "100%" }}>
