@@ -1,9 +1,29 @@
 import React, { useState, useEffect } from "react";
 import "./booksCards.css";
+import ReadBook from "./readBook";
 
-const BookSummaryList = ({ summary, imgList, bookName, author, onClose, genres }) => {
+const BookSummaryList = ({
+  summary,
+  imgList,
+  bookName,
+  author,
+  onClose,
+  pages,
+  genres,
+}) => {
   const [isVisible, setIsVisible] = useState(false);
   const [currentSummaryIndex, setCurrentSummaryIndex] = useState(0);
+  const [openBookPopup, setOpenBookPopup] = useState(false);
+
+  const openPopup = () => {
+    setOpenBookPopup(true);
+    document.body.style.overflow = "hidden";
+  };
+
+  const closePopup = () => {
+    setOpenBookPopup(false);
+    document.body.style.overflow = "scroll";
+  };
 
   useEffect(() => {
     setIsVisible(true);
@@ -47,7 +67,7 @@ const BookSummaryList = ({ summary, imgList, bookName, author, onClose, genres }
         <button
           onClick={handleClose}
           type="button"
-          class="btn-close"
+          className="btn-close"
           aria-label="Close"
         ></button>
       </div>
@@ -55,7 +75,7 @@ const BookSummaryList = ({ summary, imgList, bookName, author, onClose, genres }
         <div className="col-7 p-4">
           <div className="book-name">{bookName}</div>
           <div className="selected-book-author">{author}</div>
-           <div className="d-flex justify-content-center mt-4"><p className="genre">Genre :  {genres}</p></div>
+          {/* <div className="d-flex justify-content-center mt-4"><p className="genre">Genre :  {genres}</p></div> */}
 
           <div className="d-flex justify-content-between m-4">
             <div
@@ -83,6 +103,24 @@ const BookSummaryList = ({ summary, imgList, bookName, author, onClose, genres }
                 src="./move.png"
               ></img>
             </div>
+          </div>
+
+          <div>
+            <div className="d-flex justify-content-center">
+              <span onClick={openPopup} className="genre">
+                Click here to read more
+              </span>
+            </div>
+
+            {openBookPopup && (
+              <div
+                className={`popup-container ${openBookPopup ? "active" : ""}`}
+              >
+                <div className="popup">
+                  <ReadBook pages={pages} onClose={closePopup}></ReadBook>
+                </div>
+              </div>
+            )}
           </div>
         </div>
 

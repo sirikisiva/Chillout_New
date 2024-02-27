@@ -95,7 +95,7 @@ const Features = () => {
     
         <div className="featuresBox"  style={{ width: `${featureBoxWidth}vw` }}>
         <div>
-            <AppLogo></AppLogo> 
+            {/* <AppLogo></AppLogo>  */}
           </div>
           <FeaturesCard
             cards={cards}

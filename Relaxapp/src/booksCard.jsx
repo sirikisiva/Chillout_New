@@ -54,6 +54,7 @@ const BooksCards = ({ booksList }) => {
           <div ref={summaryListRef}>
           <BookSummaryList
             summary={selectedBook.summery}
+            pages = {selectedBook.page}
             imgList={selectedBook.img}
             bookName={selectedBook.bookName}
             author={selectedBook.author}

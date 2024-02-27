@@ -1,0 +1,19 @@
+.meditation-menu{
+    background: #fbfcfb;
+}
+.meditation-heading{
+    display: flex;
+    justify-content: center;
+    font-size: 32px;
+    color: #632B6c;
+    margin: 1rem;
+    font-weight: 600;
+}
+.meditation-subheading{
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+    color: #632B6c;
+    font-weight: 600;
+    margin: 1rem;
+}

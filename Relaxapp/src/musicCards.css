@@ -172,7 +172,7 @@ select {
   padding: 0.8rem;
 }
 .font-color{
- color: #fff;
+ /* color: #fff; */
  font-size: 14px;
 }
 .no-card-selected-message {

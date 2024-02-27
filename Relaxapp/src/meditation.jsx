@@ -34,23 +34,15 @@ const Meditation = () => {
         style={{ width: `${featureBoxWidth}vw` }}
       >
          <div className="d-flex">
-          <div className="col-7 d-flex justify-content-center">
-            <img src="./peacefulMed.png"></img>
+          <div className="col-6 d-flex justify-content-center">
+            <img src="./mindfull.png"></img>
           </div>
-          <div className="col-5">
-            <div className="books-heading">Breathe In Books - Exhale Relaxation</div>
-            <div className="books-subheading">Reading is the key that unlocks the doors of the mind, offering solace and escape to a world where imagination knows no bounds, and tranquility finds its home in the pages of a good book.</div>
-          </div>
-        </div>
-        <div className="d-flex mb-4 justify-content-center">
-          <div className="mt-4 search-width">
-            <input
-              placeholder="Search Here!"
-              type="search"
-              className="search-bar"
-            ></input>
+          <div className="col-6 d-flex justify-content-center flex-column ">
+            <div className="meditation-heading">Breathe, Relax, Repeat - Easy Meditation Essentials</div>
+            <div className="meditation-subheading">Calm your mind through meditation, fostering relaxation and clarity. Experience reduced stress and enhanced well-being with this simple practice.</div>
           </div>
         </div>
+      
         <DisplayMeditation></DisplayMeditation>
       </div>
     </div>

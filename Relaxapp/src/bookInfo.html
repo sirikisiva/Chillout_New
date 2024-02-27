@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="turn.min.js"
+    ></script>
+    <title>Flip Book</title>
+  </head>
+  <body>
+    <div id="flipbook">
+      <div>
+        <h1>Alchemist</h1>
+        <p>page1</p>
+      </div>
+      <div>
+        <h1>Alchemist</h1>
+        <p>page2</p>
+      </div>
+      <div>
+        <h1>Alchemist</h1>
+        <p>page3</p>
+      </div>
+      <div>
+        <h1>Alchemist</h1>
+        <p>page4</p>
+      </div>
+      <div>
+        <h1>Alchemist</h1>
+        <p>page5</p>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      $("#flipbook").turn({
+        width: 300,
+        height: 400,
+        autoCenter: true,
+        doubles: true,
+      });
+    </script>
+  </body>
+</html>

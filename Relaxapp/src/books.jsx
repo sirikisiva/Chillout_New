@@ -33,7 +33,7 @@ const Books = () => {
           <div className="col-7 d-flex justify-content-center">
             <img src="./readingBook.png"></img>
           </div>
-          <div className="col-5">
+          <div className="col-5 d-flex justify-content-center flex-column">
             <div className="books-heading">Breathe In Books - Exhale Relaxation</div>
             <div className="books-subheading">Reading is the key that unlocks the doors of the mind, offering solace and escape to a world where imagination knows no bounds, and tranquility finds its home in the pages of a good book.</div>
           </div>

@@ -4,7 +4,7 @@
 .books-heading{
     display: flex;
     justify-content: center;
-    margin: 3rem;
+    margin: 1rem;
     font-size: 32px;
     color: #632B6c;
     font-weight: 600;
@@ -12,7 +12,7 @@
 .books-subheading{
     display: flex;
     justify-content: center;
-    margin: 3rem;
+    margin: 1rem;
     font-size: 16px;
     color: #632B6c;
     font-weight: 600;

@@ -3,8 +3,9 @@ body {
   font-family:  "Poppins", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: rgb(187,184,226);
-  background: linear-gradient(90deg, rgba(187,184,226,1) 0%, rgba(189,138,245,1) 49%, rgba(187,184,226,1) 100%);
+  background-color: #fcfbfc;
+  /* background: rgb(187,184,226);
+  background: linear-gradient(90deg, rgba(187,184,226,1) 0%, rgba(189,138,245,1) 49%, rgba(187,184,226,1) 100%); */
 }
 body::-webkit-scrollbar {
   width: 5px;
