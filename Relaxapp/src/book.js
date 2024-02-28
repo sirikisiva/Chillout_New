@@ -34,13 +34,19 @@ export const booksList = [
       ],
       page : [
         {
-          content: "The Alchemist is rich with allusions to biblical parables, multiple systems of faith, and elements of myth that hint at its theme, an exploration of the necessity of pursuing one’s “Personal Legend,” the ultimate goal or joy in life. A child, the novel suggests, understands the spiritual truth of his or her Personal Legend, but loses it, corrupted by external forces as others impose their own expectations and act in ways that subvert that understanding. The novel’s conflicts emphasize a solution: one’s Personal Legend can only be achieved with persistence; wisdom is attained through observation and attentiveness; simple things have extraordinary value and are not to be overlooked; and God is universally manifested in everything that exists. "
+          content : "The Alchemit",
         },
         {
-          content:"The novel’s protagonist, Santiago, is a spiritual and thoughtful young man from the Andalusian region of Spain. Originally destined to be a priest by his father, he decides to become a shepherd because he loves to travel, hinting at events to come. He is introduced in the modest setting of an abandoned church, and the inciting incident occurs as he wakes from a disturbing, recurring, and yet undefined dream. From that point on, the reader is taken along as a traveling companion on Santiago’s physical and spiritual journey."
+          content: "The Alchemist is rich with allusions to biblical parables, multiple systems of faith, and elements of myth that hint at its theme, an exploration of the necessity of pursuing one’s “Personal Legend,” the ultimate goal or joy in life. A child, the novel suggests, understands the spiritual truth of his or her Personal Legend, but loses it, corrupted by external forces as others impose their own expectations and act in ways that subvert that understanding. ",
+          pagenumber : 1
         },
         {
-          content : "As the novel approaches its climax, Santiago gains an awareness of the need for spiritual growth and of the power of love. He joins a caravan with the Englishman, who seeks to find the alchemist who discovered “The Philosopher’s Stone” and the “Elixir or Life.” Their quests are associated, and at the desert oasis, seeking the alchemist, Santiago falls in love with Fatima. She urges him to continue his quest, as does the alchemist, who will accompany Santiago to the Pyramids."
+          content:"The novel’s protagonist, Santiago, is a spiritual and thoughtful young man from the Andalusian region of Spain. Originally destined to be a priest by his father, he decides to become a shepherd because he loves to travel, hinting at events to come. He is introduced in the modest setting of an abandoned church, and the inciting incident occurs as he wakes from a disturbing, recurring, and yet undefined dream. From that point on, the reader is taken along as a traveling companion on Santiago’s physical and spiritual journey.",
+          pagenumber : 2
+        },
+        {
+          content : "As the novel approaches its climax, Santiago gains an awareness of the need for spiritual growth and of the power of love. He joins a caravan with the Englishman, who seeks to find the alchemist who discovered “The Philosopher’s Stone” and the “Elixir or Life.” Their quests are associated, and at the desert oasis, seeking the alchemist, Santiago falls in love with Fatima. She urges him to continue his quest, as does the alchemist, who will accompany Santiago to the Pyramids.",
+          pagenumber : 3
         }
       ]
     },

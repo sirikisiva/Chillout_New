@@ -1,15 +1,25 @@
 import React from "react";
 
-const ShowMeditationVideos = ({ meditationType, meditationVideo }) => {
+const ShowMeditationVideos = ({ medType, mediVideo, close }) => {
   return (
-    <div className="book-list">
-      <div className="d-flex justify-content-center">{meditationType}</div>
-      <div  className="d-flex justify-content-center">
-        <video controls>
-          <source src={meditationVideo} type="video/mp4" />
+    <div>
+      <div className="d-flex justify-content-end ">
+      <button
+          onClick={close}
+          type="button"
+          className="btn-close"
+          aria-label="Close"
+        ></button>
+      </div>
+       <div className="med-list">
+      <div className="d-flex justify-content-center medType-heading">{medType}</div>
+      <div  className="d-flex justify-content-center video">
+        <video controls className="videoWidth">
+          <source src={mediVideo} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>
+    </div>
     </div>
   );
 };

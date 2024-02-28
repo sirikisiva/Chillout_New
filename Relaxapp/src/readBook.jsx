@@ -1,22 +1,8 @@
-import React, { useEffect } from "react";
+import React from "react";
+import FlipPage from "react-pageflip";
 import "./booksCards.css";
 
-const ReadBook = ({ onClose, pages }) => {
-  // useEffect(() => {  
-  //   $("#flipbook").turn({
-  //     width: 400,
-  //     height: 300,
-  //     display: "double",
-  //     autoCenter: true,
-  //     acceleration: true,
-  //   });
-  
-  //   return () => {
-  //     $("#flipbook").turn("destroy");
-  //   };
-  // }, []);
-  
-
+const ReadBook = ({ onClose, pages, img }) => {
   return (
     <div>
       <div className="d-flex justify-content-end">
@@ -28,12 +14,24 @@ const ReadBook = ({ onClose, pages }) => {
         ></button>
       </div>
 
-      <div className="d-flex justify-content-center" id="flipbook">
-        {pages.map((page, index) => (
-          <div key={index} className="page">
-            {page.content}
-          </div>
-        ))}
+      <div className="d-flex justify-content-center">
+        <FlipPage
+          width={400}
+          height={450}
+          showCover={true}
+          className="flip-page"
+        >
+         {pages.map((page, index) => (
+            <div key={index} className="page">
+              {index === 0 ? (
+                <img src={img} alt="Cover" className="cover-image" />
+              ) : (
+                <div className="page-content">{page.content}</div>
+              )}
+              <div className="page-number">{page.pagenumber}</div>
+            </div>
+          ))}
+        </FlipPage>
       </div>
     </div>
   );

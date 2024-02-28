@@ -36,6 +36,7 @@ const BooksCards = ({ booksList }) => {
           <div
             key={index}
             onClick={ () =>onSelectedBook(index) }
+            title="Simply tap the card to experience instant relaxation"
             className={`card-box ${isHovered ? "stop-movement" : ""}`}
           >
             <div className="img-card-div">

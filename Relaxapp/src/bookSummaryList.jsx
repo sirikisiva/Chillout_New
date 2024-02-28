@@ -117,7 +117,7 @@ const BookSummaryList = ({
                 className={`popup-container ${openBookPopup ? "active" : ""}`}
               >
                 <div className="popup">
-                  <ReadBook pages={pages} onClose={closePopup}></ReadBook>
+                  <ReadBook img = {imgList} pages={pages} onClose={closePopup}></ReadBook>
                 </div>
               </div>
             )}

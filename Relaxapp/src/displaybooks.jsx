@@ -35,7 +35,18 @@ const DisplayBooks = () => {
       </div>
       <div className="d-flex">
         <div className="col-12 dive-relax">
-          Dive into Relaxation with Our Collection of Books
+          {filterBook.length === 0 && searchBook.length > 0 ? (
+            <div>
+              <p className="d-flex justify-content-center">
+                No matches found for "{searchBook}"
+              </p>
+              <img className="no-match" src="./wrongsearch.png"></img>
+            </div>
+          ) : (
+            <p>
+              Dive into Relaxation with Our Collection of Books!
+            </p>
+          )}
         </div>
       </div>
       <div className="featuresBox">
