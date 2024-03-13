@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import './features.css';
+import './motivation.css';
 import DisplayMotivation from './displaymotivation';
 import SideBar from './SideBar';
 
@@ -27,6 +28,15 @@ const Motivation = () => {
        <SideBar/>
       </div>
       <div className='motivation-menu'  style={{ width : `${featureBoxWidth}vw`}}>
+      <div className="d-flex">
+          <div className="col-7 d-flex justify-content-center">
+            <img className='widthMotivation' src="./speakMotivation.png"></img>
+          </div>
+          <div className="col-5 d-flex justify-content-center flex-column">
+            <div className="books-heading">Supercharge Your Life - Hear Our Motivational Speaker's Wisdom!</div>
+            <div className="books-subheading">Motivational speakers inspire positivity, goal-setting, confidence, and resilience, fostering personal growth and well-being for a more fulfilling life.</div>
+          </div>
+        </div>
       <DisplayMotivation></DisplayMotivation>
       </div>
      

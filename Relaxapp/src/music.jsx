@@ -75,8 +75,14 @@ const Music = () => {
         <SideBar />
       </div>
       <div className="music-menu" style={{ width: `${featureBoxWidth}vw` }}>
-        <div>
-          {/* <AppLogo /> */}
+        <div className="d-flex">
+          <div className="col-7 d-flex justify-content-center">
+            <img className='' src="./music.png"></img>
+          </div>
+          <div className="col-5 d-flex justify-content-center flex-column">
+            <div className="books-heading">Harmony for the Soul - Relaxing Tunes to Ease Your Mind!</div>
+            <div className="books-subheading">Immerse Yourself in Melodic Bliss, Unveiling the Transformative Essence of Soothing Sounds for Mindful Relaxation and Renewal..</div>
+          </div>
         </div>
         <div className="d-flex mb-4 justify-content-center">
           <div className="mt-4 search-width">

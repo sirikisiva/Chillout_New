@@ -13,7 +13,11 @@ const LogoScreen = () => {
     <div className="logoScreen">
       <div className="startLogo">
         <div className="logoWithName">
-          <img className="" src="./logo.gif" alt="logo"  />
+          {/* <img className="" src="./logo.gif" alt="logo"  /> */}
+          {/* <video src="./CHILL OUT.mp4"></video> */}
+          <video className="video" loop autoPlay muted playsInline>
+        <source src="./CHILL OUT.mp4" type="video/mp4" />
+      </video>
         </div>
         <div className="startContent">
           <h1>Look through Chillout</h1>

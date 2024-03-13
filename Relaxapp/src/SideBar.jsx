@@ -63,7 +63,7 @@ const SideBar = () => {
           >
             {containerWidth ? (
               <div className="feature-list">
-                 <RiHome3Line size="1.5em" />
+                <RiHome3Line size="1.5em" />
                 <span className="link-title"> Home</span>
               </div>
             ) : (
@@ -114,19 +114,6 @@ const SideBar = () => {
           </Link>
         </div>
         <div className="link-item">
-          <Link className="sbLink" to="/Friend">
-            {containerWidth ? (
-              <div className="feature-list">
-                {" "}
-                <LiaUserFriendsSolid size="1.5em" />{" "}
-                <span className="link-title">Friends</span>
-              </div>
-            ) : (
-              <LiaUserFriendsSolid size="1.5em" />
-            )}
-          </Link>
-        </div>
-        <div className="link-item">
           <Link className="sbLink" to="/Books">
             {containerWidth ? (
               <div className="feature-list">
@@ -150,6 +137,19 @@ const SideBar = () => {
               </div>
             ) : (
               <GoPlay size="1.5em" />
+            )}
+          </Link>
+        </div>
+        <div className="link-item">
+          <Link className="sbLink" to="/Friend">
+            {containerWidth ? (
+              <div className="feature-list">
+                {" "}
+                <LiaUserFriendsSolid size="1.5em" />{" "}
+                <span className="link-title">Friends</span>
+              </div>
+            ) : (
+              <LiaUserFriendsSolid size="1.5em" />
             )}
           </Link>
         </div>
