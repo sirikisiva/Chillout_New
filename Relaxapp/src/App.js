@@ -15,6 +15,8 @@ import Motivation from "./motivation";
 import Friend from "./friend";
 import Reels from "./reels";
 import Books from "./books";
+import ExtraFeatures from "./extraFeaturesList";
+import Diary from "./diary";
 
 
 const App = () => {
@@ -35,6 +37,8 @@ const App = () => {
        <Route path="/Friend" element = {<Friend></Friend> }></Route>
        <Route path="/Reels" element = {<Reels></Reels> }></Route>
        <Route path="/Books" element = {<Books></Books> }></Route>
+       <Route path="/Diary" element = {<Diary></Diary> }></Route>
+       <Route path="/ExtraFeatures" element = {<ExtraFeatures></ExtraFeatures> }></Route>
       </Routes>
       </BrowserRouter>
     </div>

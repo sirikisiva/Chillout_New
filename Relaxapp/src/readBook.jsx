@@ -47,7 +47,7 @@ const ReadBook = ({ onClose, pages, img }) => {
             </div>
              <div className="d-flex justify-content-center m-2">
              <div className="ml-2 readLoud">
-              { index === 0 ? ' ' :   <button className="readLoud-btn" onClick={() => readAloud(page.content)}>Read Aloud</button>}
+              { index === 0 ? ' ' :   <button className="readLoud-btn" onClick={() => readAloud(page.content)}>Read</button>}
              </div>
              <div className="mr-2 pause">
               { index === 0 ? ' ' :   <button  className="pause-btn" onClick={() => stopReading()}>Pause</button>}

@@ -199,7 +199,10 @@ const LoginScreen = () => {
         </div>
       </div>
       <div className="titleAnim col-6">
-        <img src="./chillogo.png" alt="logo" />
+        {/* <img src="./logocircle.png" alt="logo" /> */}
+        <video className="logoVideo" loop autoPlay muted playsInline>
+        <source src="./unwindVideo.mp4" type="video/mp4" />
+      </video>
       </div>
     </div>
   );

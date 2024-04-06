@@ -25,37 +25,37 @@ const Features = () => {
       id: "music",
       img: "listenMusic.png",
       name: "MUSIC",
-      desc: "Feel the magic of music as it paints your emotions. Let it be the colorful brush that brightens your world.",
+      // desc: "Feel the magic of music as it paints your emotions. Let it be the colorful brush that brightens your world.",
     },
     {
       id: "meditation",
       img: "doMeditation.png",
       name: "MEDITATION",
-      desc: "Explore calm with meditation. Let it lead you to a peaceful state, bringing tranquility to your mind and body.",
+      // desc: "Explore calm with meditation. Let it lead you to a peaceful state, bringing tranquility to your mind and body.",
     },
     {
       id: "motivation",
       img: "listenMotivation.png",
       name: "MOTIVATIONAL VIDEOS",
-      desc: "Find motivation in videos. Let them inspire and drive you, bringing positive energy and encouragement to your spirit.",
+      // desc: "Find motivation in videos. Let them inspire and drive you, bringing positive energy and encouragement to your spirit.",
     },
     {
       id: "reels",
       img: "reels.png",
       name: "REELS",
-      desc: "Experience the peace of your soul in short videos. Capture moments that soothe and bring joy to your heart",
+      // desc: "Experience the peace of your soul in short videos. Capture moments that soothe and bring joy to your heart",
     },
     {
       id: "friend",
       img: "friend.png",
       name: "MAKE A FRIEND",
-      desc: "Connect with others to discover new friends and build meaningful connections, enhancing your social experience",
+      // desc: "Connect with others to discover new friends and build meaningful connections, enhancing your social experience",
     },
     {
       id: "books",
       img: "reading.png",
       name: "RELAX WITH READING",
-      desc: "Take a break and find peace in the pages of a good book. Relax your mind, unwind, and let the words soothe your soul",
+      // desc: "Take a break and find peace in the pages of a good book. Relax your mind, unwind, and let the words soothe your soul",
     },
   ];
 

@@ -13,33 +13,32 @@ const LogoScreen = () => {
     <div className="logoScreen">
       <div className="startLogo">
         <div className="logoWithName">
-          {/* <img className="" src="./logo.gif" alt="logo"  /> */}
-          {/* <video src="./CHILL OUT.mp4"></video> */}
+          {/* <img className="" src="./unwind.png" alt="logo"  /> */}
           <video className="video" loop autoPlay muted playsInline>
-        <source src="./CHILL OUT.mp4" type="video/mp4" />
+        <source src="./unwindVideo.mp4" type="video/mp4" />
       </video>
         </div>
         <div className="startContent">
-          <h1>Look through Chillout</h1>
+          <h1>Look through Unwind</h1>
           <p>
-            Welcome to Chill Out, your all-in-one haven for relaxation,
+            Welcome to UNWIND, your all-in-one haven for relaxation,
             entertainment, and building meaningful connections! 
           </p>
           <b>Discover Your Perfect Playlist </b>
           <p>
-            Embark on a musical journey tailored just for you. Chill Out provides a curated selection of music and book recommendations tailored to your preferences. Whether you're into mellow tunes or engaging novels, there's something for everyone.  
+            Embark on a musical journey tailored just for you. UNWIND provides a curated selection of music and book recommendations tailored to your preferences. Whether you're into mellow tunes or engaging novels, there's something for everyone.  
           </p>
         </div>
      
       <div className="startContent2">
         <b>Boost Your Mood:</b>
         <p>
-          Boost Your Mood: Elevate your spirits with Chill Out's mood-boosting
+          Boost Your Mood: Elevate your spirits with UNWIND's mood-boosting
           features.
         </p>
         <b>Relax and Recharge: </b>
         <p>
-          Feeling stressed or overwhelmed? Let Chill Out be your sanctuary.
+          Feeling stressed or overwhelmed? Let UNWIND be your sanctuary.
           Engage in guided meditation sessions, calming sounds, and mindfulness
           exercises to rejuvenate your mind and body.
         </p>

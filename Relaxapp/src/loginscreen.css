@@ -247,3 +247,8 @@ input:focus {
     justify-content: center;
   }
 }
+.logoVideo{
+  width: 80%;
+  height: 80vh;
+  object-fit: fill;
+}

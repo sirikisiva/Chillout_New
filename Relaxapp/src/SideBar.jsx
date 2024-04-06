@@ -11,6 +11,7 @@ import { IoBookOutline } from "react-icons/io5";
 import { RiSpeakLine } from "react-icons/ri";
 import { GiMeditation } from "react-icons/gi";
 import { RiHome3Line } from "react-icons/ri";
+import { MdBook } from "react-icons/md";
 import LogOutPopup from "./logOutPopup";
 
 const SideBar = () => {
@@ -153,6 +154,31 @@ const SideBar = () => {
             )}
           </Link>
         </div>
+        <div className="link-item">
+          <Link className="sbLink" to="/Diary">
+            {containerWidth ? (
+              <div className="feature-list">
+                <MdBook size="1.5em" />
+                <span className="link-title"> Diary</span>
+              </div>
+            ) : (
+              <MdBook size="1.5em" />
+            )}
+          </Link>
+        </div>
+        {/* <div className="link-item">
+          <Link className="sbLink" to="/ExtraFeatures">
+            {containerWidth ? (
+              <div className="feature-list">
+                {" "}
+                <LiaUserFriendsSolid size="1.5em" />{" "}
+                <span className="link-title">Extra Features</span>
+              </div>
+            ) : (
+              <LiaUserFriendsSolid size="1.5em" />
+            )}
+          </Link>
+        </div> */}
       </div>
       <div className="sideBarEndIcons">
         <div className="profile">

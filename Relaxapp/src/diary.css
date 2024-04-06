@@ -1,0 +1,42 @@
+.diaryButton{
+    margin: -0.8rem;
+}
+.diaryBook{
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    border: 1px solid;
+    background: #632b6c;
+    padding: 0.6rem;
+    color: #ffffff;
+    font-size: 18px;
+    width: 40%;
+    cursor: pointer;
+}
+.text{
+    color: #632b6c;
+    font-size: 24px;
+    font-weight: 500;
+}
+.bg{
+    background-image: url('../public/dirayBg.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.filterBtn{
+    filter: invert(1);
+}
+.memory-input {
+    width: 80%;
+    height: 330px;
+    padding: 15px;
+    font-size: 16px;
+    border: 2px solid #632b6c;
+    border-radius: 5px;
+    resize: vertical;
+    margin: 2rem;
+    outline: none;
+    background: none;
+}
+
+  
