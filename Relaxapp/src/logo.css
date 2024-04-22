@@ -10,7 +10,7 @@
 }
 .signIn {
   position: absolute;
-  top: 80%;
+  top: 90%;
   left: 50%;
   transform: translate(-50%, -35%);
   transition: all 0.5s ease;
@@ -29,7 +29,8 @@
 }
 .signIn:hover {
   /* background-color: var(--purple); */
-  background-color: #9131ff;
+  background-color: #632b6c;
+  ;
   color: #ffffff;
   border: none;
   /* border-radius: 30px; */
